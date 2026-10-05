@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deutsch B1 В· Lektion 1 В· Familie und Beziehungen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--band:#E6EEFA;--ink:#1a1a1a;--muted:#555b66;--line:#dfe4ec;--chip:#f3f6fb;--chip-h:#e6eefa;--red:#C8102E;--gold:#E8B000;--flagblack:#000;--warn:#FFF4D6;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15181d;--band:#1c2533;--ink:#eceff4;--muted:#a6adba;--line:#2c3340;--chip:#1f2530;--chip-h:#2a3446;--flagblack:#2b2b2b;--warn:#3a3218}}
+:root[data-theme="dark"]{--bg:#15181d;--band:#1c2533;--ink:#eceff4;--muted:#a6adba;--line:#2c3340;--chip:#1f2530;--chip-h:#2a3446;--flagblack:#2b2b2b;--warn:#3a3218}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 120px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans",system-ui,sans-serif;font-size:16px;line-height:1.5}
+h1,h2,h3{font-family:"Noto Serif",Georgia,serif;font-weight:700;margin:0}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header{background:var(--band)}
+header .wrap{padding-top:28px;padding-bottom:22px}
+header h1{font-size:clamp(28px,6vw,44px);line-height:1.1}
+header p{margin:8px 0 0;color:var(--muted);max-width:60ch}
+.flag{height:9px;background:linear-gradient(var(--flagblack) 0 33.3%,var(--red) 0 66.6%,var(--gold) 0)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;padding-top:10px;padding-bottom:10px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:transparent;color:var(--ink);padding:7px 14px;font:inherit;font-size:14px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:#2E5E8C;color:#fff}
+.stop{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-size:14px;cursor:pointer}
+nav{display:flex;gap:6px;flex-wrap:wrap;width:100%}
+nav a{font-size:14px;color:var(--ink);text-decoration:none;padding:4px 10px;border-radius:6px;background:var(--chip)}
+nav a:hover{background:var(--chip-h)}
+.voice{font-size:13px;color:var(--muted);margin-left:auto}
+.warn{background:var(--warn);border-left:4px solid var(--gold);padding:12px 16px;margin:18px 0;border-radius:4px;display:none}
+.warn.show{display:block}
+section.part{padding:30px 0 10px}
+section.part>h2{font-size:28px;padding-bottom:6px;border-bottom:2px solid var(--acc);color:var(--acc)}
+section.part>p.lead{color:var(--muted);margin:8px 0 0;max-width:70ch}
+.block{margin-top:22px;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.block .head{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;background:var(--acc);color:#fff;padding:9px 12px}
+.block .head h3{font-size:20px}
+.block .head .s{font-weight:600}
+.block .head .w{opacity:.9;font-size:14px}
+.block .head .all{margin-left:auto}
+.play{border:1px solid rgba(255,255,255,.7);background:transparent;color:#fff;border-radius:999px;padding:4px 12px;font:inherit;font-size:13px;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px}
+.chip{border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:8px;padding:6px 11px;font:inherit;font-size:17px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.chip:hover{background:var(--chip-h)}
+.chip::before{content:"";width:0;height:0;border-left:7px solid var(--acc);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.chip.on{outline:2px solid var(--acc);background:var(--chip-h)}
+mark{background:transparent;color:var(--acc);font-weight:700}
+.dlg{margin-top:22px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.dlg .head{display:flex;align-items:center;gap:10px;background:var(--acc);color:#fff;padding:9px 12px}
+.dlg .head h3{font-size:19px}
+.tag{font-size:12px;font-weight:700;background:rgba(255,255,255,.25);padding:1px 7px;border-radius:4px}
+.dlg ol{list-style:none;margin:0;padding:8px 0}
+.dlg li{display:grid;grid-template-columns:120px 1fr;gap:10px;padding:6px 14px;cursor:pointer}
+.dlg li:hover{background:var(--chip)}
+.dlg li.on{background:var(--chip-h)}
+.dlg li b{color:var(--acc)}
+.reg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px}
+.reg .card{border:1px solid var(--line);border-top:5px solid var(--acc);border-radius:8px;padding:10px 12px}
+.reg h3{font-size:20px;color:var(--acc);margin-bottom:6px}
+.reg .row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--line)}
+.reg .row:last-child{border-bottom:0}
+.reg .row .where{color:var(--muted);font-size:13px}
+.reg .row a{margin-left:auto;font-size:13px;color:var(--acc);white-space:nowrap}
+.note{color:var(--muted);font-size:14px;margin-top:8px}
+.chip small{font-size:12px;color:var(--muted);margin-left:2px}
+.verbs .chip{font-size:16px}
+.text{margin-top:18px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.text .head{display:flex;align-items:center;gap:10px;background:var(--acc);color:#fff;padding:9px 12px}
+.text .head h3{font-size:19px}
+.text .body{padding:6px 16px 10px;font-size:17px;line-height:1.75}
+.text p{margin:10px 0}
+.sent{cursor:pointer;border-radius:4px;padding:1px 2px}
+.sent:hover{background:var(--chip)}
+.sent.on{background:var(--chip-h);outline:2px solid var(--acc)}
+footer{color:var(--muted);font-size:13px;padding:30px 0 40px}
+button:focus-visible,a:focus-visible,li:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media (max-width:560px){.dlg li{grid-template-columns:1fr;gap:0}.voice{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Lektion 1 В· Familie und Beziehungen</h1>
+<p>Audio zum Lehrbuch. Klicken Sie auf ein Wort oder einen Satz. Mit вЂћLangsamвЂњ hГ¶ren Sie alles langsamer.</p>
+</div></header>
+<div class="flag"></div>
+<div class="bar"><div class="wrap">
+<div class="seg" role="group" aria-label="Tempo">
+<button id="r1" aria-pressed="true">Normal</button><button id="r2" aria-pressed="false">Langsam</button>
+</div>
+<button class="stop" id="stop">Stopp</button>
+<span class="voice" id="voice">Suche deutsche Stimme вЂ¦</span>
+<nav>
+<a href="./">в†ђ Alle Lektionen</a><a href="#l1-wortschatz">Wortschatz</a><a href="#l1-lesetext">Lesetext</a><a href="#l1-dialog">Dialog</a>
+</nav>
+</div></div>
+<main class="wrap">
+<div class="warn" id="warn"></div>
+<div id="app"></div>
+</main>
+<footer class="wrap">Die WГ¶rter liest die Sprachausgabe Ihres GerГ¤ts (Standarddeutsch). Es gibt keine Registrierung und es werden keine Daten gesammelt.</footer>
+<script>
+const D={"N": 1, "WS": [["Familie und Verwandtschaft", "#2F7D6D", [["die Verwandtschaft (Sg.)", "die Verwandtschaft", "СЂРѕРґРЅСЏ, СЂРѕРґСЃС‚РІРµРЅРЅРёРєРё"], ["der/die Verwandte, -n", "der, die Verwandte", "СЂРѕРґСЃС‚РІРµРЅРЅРёРє / СЂРѕРґСЃС‚РІРµРЅРЅРёС†Р°"], ["der Cousin, -s / die Cousine, -n", "der Cousin, die Cousine", "РґРІРѕСЋСЂРѕРґРЅС‹Р№ Р±СЂР°С‚ / СЃРµСЃС‚СЂР°"], ["der Neffe, -n / die Nichte, -n", "der Neffe, die Nichte", "РїР»РµРјСЏРЅРЅРёРє / РїР»РµРјСЏРЅРЅРёС†Р°"], ["der Enkel, - / die Enkelin, -nen", "der Enkel, die Enkelin", "РІРЅСѓРє / РІРЅСѓС‡РєР°"], ["der Schwager, ВЁ- / die SchwГ¤gerin, -nen", "der Schwager, die SchwГ¤gerin", "Р·СЏС‚СЊ, С€СѓСЂРёРЅ, РґРµРІРµСЂСЊ / РЅРµРІРµСЃС‚РєР°, Р·РѕР»РѕРІРєР°"], ["die Schwiegermutter, ВЁ- В· die Schwiegereltern (Pl.)", "die Schwiegermutter, die Schwiegereltern", "СЃРІРµРєСЂРѕРІСЊ, С‚С‘С‰Р° В· СЂРѕРґРёС‚РµР»Рё РјСѓР¶Р° / Р¶РµРЅС‹"], ["die Geschwister (Pl.)", "die Geschwister", "Р±СЂР°С‚СЊСЏ Рё СЃС‘СЃС‚СЂС‹"], ["das Einzelkind, -er", "das Einzelkind", "РµРґРёРЅСЃС‚РІРµРЅРЅС‹Р№ СЂРµР±С‘РЅРѕРє"], ["die Generation, -en", "die Generation", "РїРѕРєРѕР»РµРЅРёРµ"], ["das Familienfest, -e", "das Familienfest", "СЃРµРјРµР№РЅС‹Р№ РїСЂР°Р·РґРЅРёРє"]], false], ["Menschen beschreiben", "#8A5A9E", [["schГјchtern", "schГјchtern", "Р·Р°СЃС‚РµРЅС‡РёРІС‹Р№"], ["hГ¶flich", "hГ¶flich", "РІРµР¶Р»РёРІС‹Р№"], ["einsam", "einsam", "РѕРґРёРЅРѕРєРёР№"], ["selbststГ¤ndig", "selbststГ¤ndig", "СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅС‹Р№"], ["anstrengend", "anstrengend", "СѓС‚РѕРјРёС‚РµР»СЊРЅС‹Р№, С‚СЏР¶С‘Р»С‹Р№"]], false], ["Beziehungen und Familienstand", "#B23A48", [["die Beziehung, -en", "die Beziehung", "РѕС‚РЅРѕС€РµРЅРёСЏ"], ["die Ehe, -n", "die Ehe", "Р±СЂР°Рє (СЃСѓРїСЂСѓР¶РµСЃС‚РІРѕ)"], ["die Hochzeit, -en", "die Hochzeit", "СЃРІР°РґСЊР±Р°"], ["das Geheimnis, -se", "das Geheimnis", "СЃРµРєСЂРµС‚, С‚Р°Р№РЅР°"], ["einander", "einander", "РґСЂСѓРі РґСЂСѓРіР°"], ["ledig", "ledig", "РЅРµ Р¶РµРЅР°С‚ / РЅРµ Р·Р°РјСѓР¶РµРј"], ["verheiratet", "verheiratet", "Р¶РµРЅР°С‚ / Р·Р°РјСѓР¶РµРј"], ["getrennt (leben)", "getrennt", "(Р¶РёС‚СЊ) СЂР°Р·РґРµР»СЊРЅРѕ"], ["geschieden", "geschieden", "СЂР°Р·РІРµРґС‘РЅ / СЂР°Р·РІРµРґРµРЅР°"]], false], ["Wichtige kleine WГ¶rter", "#1F7A99", [["damals", "damals", "С‚РѕРіРґР°, РІ С‚Рѕ РІСЂРµРјСЏ"], ["eines Abends", "eines Abends", "РѕРґРЅР°Р¶РґС‹ РІРµС‡РµСЂРѕРј"], ["von da an", "von da an", "СЃ С‚РѕРіРѕ РјРѕРјРµРЅС‚Р°"], ["seitdem", "seitdem", "СЃ С‚РµС… РїРѕСЂ"], ["kaum", "kaum", "РµРґРІР°, РїРѕС‡С‚Рё РЅРµ"], ["die beiden", "die beiden", "РѕР±Р°, СЌС‚Рё РґРІРѕРµ"], ["eigen- (meine eigene Wohnung)", "eigen-", "СЃРѕР±СЃС‚РІРµРЅРЅС‹Р№"], ["unbedingt", "unbedingt", "РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ"], ["keine Ahnung haben", "keine Ahnung haben", "РїРѕРЅСЏС‚РёСЏ РЅРµ РёРјРµС‚СЊ"], ["dagegen sein", "dagegen sein", "Р±С‹С‚СЊ РїСЂРѕС‚РёРІ"], ["die Katastrophe, -n", "die Katastrophe", "РєР°С‚Р°СЃС‚СЂРѕС„Р°"], ["die Miete, -n", "die Miete", "РєРІР°СЂС‚РїР»Р°С‚Р°, Р°СЂРµРЅРґР°"]], false], ["Neue Verben", "#2E5E8C", [["(sich) kennenlernen В· lernte kennen В· hat kennengelernt", "kennenlernen, lernte kennen, hat kennengelernt", "Р·РЅР°РєРѕРјРёС‚СЊСЃСЏ"], ["grГјГџen В· grГјГџte В· hat gegrГјГџt", "grГјГџen, grГјГџte, hat gegrГјГџt", "Р·РґРѕСЂРѕРІР°С‚СЊСЃСЏ СЃ РєРµРј-С‚Рѕ"], ["klingeln В· klingelte В· hat geklingelt", "klingeln, klingelte, hat geklingelt", "Р·РІРѕРЅРёС‚СЊ (РІ РґРІРµСЂСЊ)"], ["einschlafen В· schlief ein В· ist eingeschlafen", "einschlafen, schlief ein, ist eingeschlafen", "Р·Р°СЃС‹РїР°С‚СЊ"], ["sich treffen В· traf sich В· hat sich getroffen", "sich treffen, traf sich, hat sich getroffen", "РІСЃС‚СЂРµС‡Р°С‚СЊСЃСЏ"], ["sich streiten (mit / Гјber + A) В· stritt sich В· hat sich gestritten", "sich streiten, stritt sich, hat sich gestritten", "СЃСЃРѕСЂРёС‚СЊСЃСЏ, СЃРїРѕСЂРёС‚СЊ"], ["sich verlieben (in + A) В· verliebte sich В· hat sich verliebt", "sich verlieben, verliebte sich, hat sich verliebt", "РІР»СЋР±РёС‚СЊСЃСЏ"], ["aufgeben В· gab auf В· hat aufgegeben", "aufgeben, gab auf, hat aufgegeben", "СЃРґР°РІР°С‚СЊСЃСЏ, Р±СЂРѕСЃР°С‚СЊ"], ["sich verstehen (mit) В· verstand sich В· hat sich verstanden", "sich verstehen, verstand sich, hat sich verstanden", "Р»Р°РґРёС‚СЊ"], ["heiraten В· heiratete В· hat geheiratet", "heiraten, heiratete, hat geheiratet", "Р¶РµРЅРёС‚СЊСЃСЏ, РІС‹Р№С‚Рё Р·Р°РјСѓР¶"], ["sich trennen (von) В· trennte sich В· hat sich getrennt", "sich trennen, trennte sich, hat sich getrennt", "СЂР°СЃСЃС‚Р°С‚СЊСЃСЏ"], ["vertrauen (+ D) В· vertraute В· hat vertraut", "vertrauen, vertraute, hat vertraut", "РґРѕРІРµСЂСЏС‚СЊ"], ["unterstГјtzen В· unterstГјtzte В· hat unterstГјtzt", "unterstГјtzen, unterstГјtzte, hat unterstГјtzt", "РїРѕРґРґРµСЂР¶РёРІР°С‚СЊ"], ["reichen В· reichte В· hat gereicht", "reichen, reichte, hat gereicht", "С…РІР°С‚Р°С‚СЊ (Das Geld reicht.)"], ["sterben В· starb В· ist gestorben", "sterben, starb, ist gestorben", "СѓРјРёСЂР°С‚СЊ"], ["sich kГјmmern (um) В· kГјmmerte sich В· hat sich gekГјmmert", "sich kГјmmern, kГјmmerte sich, hat sich gekГјmmert", "Р·Р°Р±РѕС‚РёС‚СЊСЃСЏ"], ["sich erinnern (an + A) В· erinnerte sich В· hat sich erinnert", "sich erinnern, erinnerte sich, hat sich erinnert", "РІСЃРїРѕРјРёРЅР°С‚СЊ, РїРѕРјРЅРёС‚СЊ"], ["ziehen (nach / in + A) В· zog В· ist gezogen", "ziehen, zog, ist gezogen", "РїРµСЂРµРµР·Р¶Р°С‚СЊ (РєСѓРґР°-С‚Рѕ)"], ["umziehen В· zog um В· ist umgezogen", "umziehen, zog um, ist umgezogen", "РїРµСЂРµРµР·Р¶Р°С‚СЊ (РјРµРЅСЏС‚СЊ Р¶РёР»СЊС‘)"], ["ausziehen В· zog aus В· ist ausgezogen", "ausziehen, zog aus, ist ausgezogen", "СЃСЉРµР·Р¶Р°С‚СЊ"], ["vermieten В· vermietete В· hat vermietet", "vermieten, vermietete, hat vermietet", "СЃРґР°РІР°С‚СЊ (Р¶РёР»СЊС‘)"]], true], ["Wiederholung: Diese Verben kommen im Text vor", "#C27C0E", [["sein В· war В· ist gewesen", "sein, war, ist gewesen", "Р±С‹С‚СЊ"], ["haben В· hatte В· hat gehabt", "haben, hatte, hat gehabt", "РёРјРµС‚СЊ"], ["werden В· wurde В· ist geworden", "werden, wurde, ist geworden", "СЃС‚Р°РЅРѕРІРёС‚СЊСЃСЏ"], ["kГ¶nnen В· konnte В· hat gekonnt", "kГ¶nnen, konnte, hat gekonnt", "РјРѕС‡СЊ"], ["wollen В· wollte В· hat gewollt", "wollen, wollte, hat gewollt", "С…РѕС‚РµС‚СЊ"], ["kennen В· kannte В· hat gekannt", "kennen, kannte, hat gekannt", "Р·РЅР°С‚СЊ (РєРѕРіРѕ-С‚Рѕ)"], ["wissen В· wusste В· hat gewusst", "wissen, wusste, hat gewusst", "Р·РЅР°С‚СЊ (С‡С‚Рѕ-С‚Рѕ)"], ["finden В· fand В· hat gefunden", "finden, fand, hat gefunden", "РЅР°С…РѕРґРёС‚СЊ; СЃС‡РёС‚Р°С‚СЊ"], ["helfen В· half В· hat geholfen", "helfen, half, hat geholfen", "РїРѕРјРѕРіР°С‚СЊ"], ["gehen В· ging В· ist gegangen", "gehen, ging, ist gegangen", "РёРґС‚Рё"], ["kommen В· kam В· ist gekommen", "kommen, kam, ist gekommen", "РїСЂРёС…РѕРґРёС‚СЊ"], ["sprechen В· sprach В· hat gesprochen", "sprechen, sprach, hat gesprochen", "РіРѕРІРѕСЂРёС‚СЊ"], ["bekommen В· bekam В· hat bekommen", "bekommen, bekam, hat bekommen", "РїРѕР»СѓС‡Р°С‚СЊ"]], true]], "LT": {"title": "Wie sich meine GroГџeltern kennenlernten", "paras": [["Meine Oma Hilde erzГ¤hlt diese Geschichte bei jedem Familienfest.", "Ich habe sie schon zwanzigmal gehГ¶rt, aber ich hГ¶re sie immer noch gern."], ["Im Sommer 1968 zog Hilde mit ihren Eltern von einem kleinen Dorf nach Leipzig.", "Sie war damals neunzehn und kannte in der Stadt keinen Menschen.", "Neben ihnen wohnte eine Familie mit einem Sohn, Werner.", "Werner studierte Mathematik und war ein ruhiger, ein bisschen schГјchterner Junge."], ["Hilde fand den Nachbarn zuerst langweilig.", "Er grГјГџte immer hГ¶flich, sagte aber sonst kaum etwas.", "Doch eines Abends klingelte er an ihrer TГјr.", "Er brauchte Hilfe: Er wollte fГјr seine Mutter einen Geburtstagskuchen backen und hatte keine Ahnung, wie das geht.", "Hilde half ihm.", "Der Kuchen wurde eine Katastrophe, aber die beiden lachten den ganzen Abend.", "In dieser Nacht konnte Hilde lange nicht einschlafen."], ["Von da an trafen sie sich fast jeden Tag.", "Sie gingen spazieren, sprachen Гјber BГјcher und Musik und stritten sich manchmal Гјber Politik.", "Nach einem Jahr verliebte sich Hilde in den jungen Studenten вЂ“ und er sich in sie.", "Hildes Vater war zuerst dagegen.", "Er wollte fГјr seine Tochter einen Mann mit einem sicheren Beruf.", "Aber Werner gab nicht auf.", "Er besuchte den alten Herrn jeden Sonntag, und am Ende verstanden sich die beiden MГ¤nner sehr gut."], ["1971 heirateten Hilde und Werner.", "Nach der Hochzeit bekamen sie drei Kinder, und die Familie zog in eine grГ¶Гџere Wohnung um.", "Das Leben war nicht immer leicht: Das Geld reichte oft nicht, und beide arbeiteten viel.", "Aber sie vertrauten einander und unterstГјtzten sich immer."], ["Mein Opa starb vor fГјnf Jahren.", "Seitdem wohnt Oma allein, aber einsam ist sie nicht: Ihre Kinder, Enkel und sogar ihr Neffe besuchen sie oft.", "Und wenn jemand fragt, was das Geheimnis einer langen Ehe ist, antwortet sie immer: вЂћMan muss zusammen lachen kГ¶nnen вЂ“ auch Гјber einen schlechten Kuchen.вЂњ"]]}, "DL": [["Hotel Mama? вЂ“ Jana und Lukas", "du", "#1F7A99", [["Jana", "f", "Hey Lukas! Wie war dein Wochenende?"], ["Lukas", "m", "Ganz gut. Am Samstag war die Hochzeit von meinem Cousin. Wir waren Гјber hundert GГ¤ste вЂ“ fast die ganze Verwandtschaft!"], ["Jana", "f", "Wow! Und, wie warвЂ™s?"], ["Lukas", "m", "SchГ¶n, aber anstrengend. Meine Tante wollte die ganze Zeit wissen, wann ich endlich ausziehe."], ["Jana", "f", "Du wohnst noch bei deinen Eltern? Das wusste ich gar nicht."], ["Lukas", "m", "Ja, im вЂћHotel MamaвЂњ. Die Miete in der Stadt ist einfach zu teuer, und ich verstehe mich gut mit meinen Eltern."], ["Jana", "f", "Ich bin mit neunzehn ausgezogen. Am Anfang war das schwer, aber ich wurde schnell selbststГ¤ndig."], ["Lukas", "m", "Das glaube ich. Aber ich helfe zu Hause auch viel: Ich kaufe ein und kГјmmere mich um den Garten."], ["Jana", "f", "Und was sagt deine Freundin dazu?"], ["Lukas", "m", "Na ja вЂ¦ Sie findet, ein Mann mit 26 braucht eine eigene Wohnung. Deshalb suchen wir jetzt zusammen eine."], ["Jana", "f", "Echt? Viel GlГјck! Ein Kollege von mir vermietet gerade eine Wohnung. Soll ich ihn fragen?"], ["Lukas", "m", "Ja, unbedingt! Danke dir!"]]]]};
+let rate=0.9, deVoices=[], token=0;
+const $=s=>document.querySelector(s);
+function loadVoices(){
+  deVoices=speechSynthesis.getVoices().filter(v=>/^de/i.test(v.lang));
+  const de=deVoices.filter(v=>/de[-_]DE/i.test(v.lang));
+  const w=$('#warn'), vi=$('#voice');
+  if(!deVoices.length){
+    vi.textContent='Keine deutsche Stimme gefunden';
+    w.innerHTML='<b>РќР° СЌС‚РѕРј СѓСЃС‚СЂРѕР№СЃС‚РІРµ РЅРµС‚ РЅРµРјРµС†РєРѕРіРѕ РіРѕР»РѕСЃР°.</b> Android: РќР°СЃС‚СЂРѕР№РєРё в†’ РЎРёРЅС‚РµР· СЂРµС‡Рё в†’ Google в†’ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РіРѕР»РѕСЃ В«DeutschВ». Windows: РџР°СЂР°РјРµС‚СЂС‹ в†’ Р’СЂРµРјСЏ Рё СЏР·С‹Рє в†’ Р РµС‡СЊ в†’ РґРѕР±Р°РІРёС‚СЊ РЅРµРјРµС†РєРёР№. iPhone Рё Mac: РЅРµРјРµС†РєРёР№ РіРѕР»РѕСЃ РѕР±С‹С‡РЅРѕ СѓР¶Рµ РµСЃС‚СЊ, РїРѕРїСЂРѕР±СѓР№С‚Рµ Safari.';
+    w.classList.add('show');
+  } else { w.classList.remove('show'); vi.textContent='Stimme: '+(de[0]||deVoices[0]).name; }
+}
+function pick(lang,which){
+  const exact=deVoices.filter(v=>v.lang.replace('_','-').toLowerCase()===lang.toLowerCase());
+  const pool=exact.length?exact:deVoices.filter(v=>/de[-_]DE/i.test(v.lang)).length?deVoices.filter(v=>/de[-_]DE/i.test(v.lang)):deVoices;
+  if(!pool.length) return null;
+  return pool[(which||0)%pool.length];
+}
+function say(text,opt={}){
+  return new Promise(res=>{
+    const u=new SpeechSynthesisUtterance(text);
+    const v=pick(opt.lang||'de-DE',opt.which); if(v){u.voice=v;u.lang=v.lang}else u.lang=opt.lang||'de-DE';
+    u.rate=rate; u.pitch=opt.pitch||1;
+    u.onend=u.onerror=()=>res(); speechSynthesis.speak(u);
+  });
+}
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+function stop(){token++;speechSynthesis.cancel();document.querySelectorAll('.on').forEach(e=>e.classList.remove('on'))}
+async function run(list){ // list of [el,text,opt]
+  stop(); const my=token;
+  for(const [el,t,o] of list){
+    if(my!==token) return;
+    el&&el.classList.add('on'); await say(t,o); el&&el.classList.remove('on');
+    if(my!==token) return; await wait(list.length>1?320:0);
+  }
+}
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function wordBlocks(arr){
+  return arr.map(b=>`<div class="block" id="${b.id}" style="--acc:${b.col}"><div class="head"><h3>${b.title}</h3><span class="s">${esc(b.sound)}</span><span class="w">${esc(b.when)}</span><button class="play all">Р’СЃРµ СЃР»РѕРІР°</button></div>
+  <div class="chips">${b.items.map(i=>`<button class="chip" data-t="${esc(i.t)}">${i.h}</button>`).join('')}</div></div>`).join('');
+}
+let h='';
+const chipsOf=ws=>ws.map(([d,t,r])=>`<button class="chip" data-t="${esc(t)}">${esc(d)}${r?` <small>${esc(r)}</small>`:''}</button>`).join('');
+h+=`<section class="part" id="l${D.N}-wortschatz" style="--acc:#2E5E8C"><h2>Wortschatz</h2><p class="lead">Verben hГ¶ren Sie mit drei Formen: Infinitiv, PrГ¤teritum, Perfekt.</p>`+
+  D.WS.map(([t,c,ws,v],i)=>`<div class="block${v?' verbs':''}" id="l${D.N}-ws-${i+1}" style="--acc:${c}"><div class="head"><h3>${esc(t)}</h3><button class="play all">Alle WГ¶rter</button></div><div class="chips">${chipsOf(ws)}</div></div>`).join('')+`</section>`;
+if(D.LT)h+=`<section class="part" id="l${D.N}-lesetext" style="--acc:#B23A48"><h2>Lesetext</h2><p class="lead">Klicken Sie auf einen Satz oder hГ¶ren Sie den ganzen Text.</p>`+
+  `<div class="text" style="--acc:#B23A48"><div class="head"><h3>${esc(D.LT.title)}</h3><button class="play all" style="margin-left:auto">Ganzen Text hГ¶ren</button></div><div class="body">`+
+  D.LT.paras.map(p=>`<p>${p.map(x=>`<span class="sent" tabindex="0" data-t="${esc(x)}">${esc(x)}</span>`).join(' ')}</p>`).join('')+`</div></div></section>`;
+if(D.DL&&D.DL.length)h+=`<section class="part" id="l${D.N}-dialog" style="--acc:#1F7A99"><h2>Dialog</h2><p class="lead">вЂћDialog hГ¶renвЂњ spielt das ganze GesprГ¤ch. Einzelne SГ¤tze hГ¶ren Sie mit einem Klick.</p>`+
+  D.DL.map(([t,tag,c,ls],i)=>`<div class="dlg" id="l${D.N}-d${i+1}" style="--acc:${c}"><div class="head"><h3>${esc(t)}</h3><span class="tag">${tag}</span><button class="play all" style="margin-left:auto">Dialog hГ¶ren</button></div>
+  <ol>${ls.map(([n,g,x])=>`<li tabindex="0" data-t="${esc(x)}" data-g="${g}"><b>${esc(n)}:</b><span>${esc(x)}</span></li>`).join('')}</ol></div>`).join('')+`</section>`;
+$('#app').innerHTML=h;
+
+document.addEventListener('click',e=>{
+  const chip=e.target.closest('.chip');
+  if(chip){run([[chip,chip.dataset.t,{lang:chip.dataset.l}]]);return}
+  const sent=e.target.closest('.sent');
+  if(sent){run([[sent,sent.dataset.t,{}]]);return}
+  const all=e.target.closest('.play.all');
+  if(all){const box=all.closest('.block,.dlg,.text');
+    if(box.classList.contains('dlg')) playDialog(box);
+    else if(box.classList.contains('text')) run([...box.querySelectorAll('.sent')].map(x=>[x,x.dataset.t,{}]));
+    else run([...box.querySelectorAll('.chip')].map(c=>[c,c.dataset.t,{lang:c.dataset.l}]));return}
+  const li=e.target.closest('.dlg li');
+  if(li){run([[li,li.dataset.t,voiceFor(li)]])}
+});
+document.addEventListener('keydown',e=>{const se=e.target.closest&&e.target.closest('.sent');if(se&&(e.key==='Enter'||e.key===' ')){e.preventDefault();run([[se,se.dataset.t,{}]]);return}const li=e.target.closest&&e.target.closest('.dlg li');if(li&&(e.key==='Enter'||e.key===' ')){e.preventDefault();run([[li,li.dataset.t,voiceFor(li)]])}});
+function voiceFor(li){const de=deVoices.filter(v=>/de[-_]DE/i.test(v.lang));const two=de.length>1;
+  return li.dataset.g==='f'?{which:0,pitch:two?1:1.15}:{which:1,pitch:two?1:0.8}}
+function playDialog(box){run([...box.querySelectorAll('li')].map(li=>[li,li.dataset.t,voiceFor(li)]))}
+$('#r1').onclick=()=>{rate=0.9;$('#r1').setAttribute('aria-pressed','true');$('#r2').setAttribute('aria-pressed','false')};
+$('#r2').onclick=()=>{rate=0.6;$('#r2').setAttribute('aria-pressed','true');$('#r1').setAttribute('aria-pressed','false')};
+$('#stop').onclick=stop;
+if('speechSynthesis' in window){loadVoices();speechSynthesis.onvoiceschanged=loadVoices;setTimeout(loadVoices,800)}
+else{$('#voice').textContent='Keine Sprachausgabe';$('#warn').textContent='Р­С‚РѕС‚ Р±СЂР°СѓР·РµСЂ РЅРµ СѓРјРµРµС‚ РѕР·РІСѓС‡РёРІР°С‚СЊ С‚РµРєСЃС‚. РћС‚РєСЂРѕР№С‚Рµ СЃС‚СЂР°РЅРёС†Сѓ РІ Chrome, Safari РёР»Рё Edge.';$('#warn').classList.add('show')}
+</script>
+</body>
+</html>
