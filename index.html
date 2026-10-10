@@ -66,10 +66,9 @@ mark{background:transparent;color:var(--acc);font-weight:700}
 .reg .row .where{color:var(--muted);font-size:13px}
 .reg .row a{margin-left:auto;font-size:13px;color:var(--acc);white-space:nowrap}
 .note{color:var(--muted);font-size:14px;margin-top:8px}
-.cw{display:inline-flex;align-items:stretch}
-.cw .chip{border-top-right-radius:0;border-bottom-right-radius:0}
-.dw{display:inline-flex;align-items:center;padding:0 8px;font-size:11px;font-weight:700;letter-spacing:.03em;color:var(--acc);border:1px solid var(--line);border-left:none;border-radius:0 8px 8px 0;text-decoration:none;background:var(--bg)}
-.dw:hover{background:var(--chip)}
+.cw{display:inline-flex;align-items:flex-start;gap:0}
+.dw{align-self:flex-start;margin:-3px 0 0 1px;padding:1px 3px;font-size:9px;font-weight:600;letter-spacing:.02em;color:var(--muted);opacity:.7;text-decoration:none;background:none;border:none;line-height:1}
+.dw:hover,.dw:focus-visible{opacity:1;text-decoration:underline}
 .dwnote{font-size:14px;color:var(--muted);margin:10px 0 0}
 select.vsel{font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 8px;max-width:100%}
 details.tip{margin:14px 0 0;background:var(--chip);border-radius:8px;padding:10px 14px;font-size:14px}
@@ -166,11 +165,11 @@ async function run(list){ // list of [el,text,opt]
 const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 function wordBlocks(arr){
   return arr.map(b=>`<div class="block" id="${b.id}" style="--acc:${b.col}"><div class="head"><h3>${b.title}</h3><span class="s">${esc(b.sound)}</span><span class="w">${esc(b.when)}</span><button class="play all">Все слова</button></div>
-  <div class="chips">${b.items.map(i=>i.u?`<span class="cw"><button class="chip" data-t="${esc(i.t)}"><span>${i.h}</span></button><a class="dw" href="${i.u}" target="_blank" rel="noopener" title="Послушать в словаре DWDS">DWDS</a></span>`:`<button class="chip" data-t="${esc(i.t)}"><span>${i.h}</span></button>`).join('')}</div></div>`).join('');
+  <div class="chips">${b.items.map(i=>i.u?`<span class="cw"><button class="chip" data-t="${esc(i.t)}"><span>${i.h}</span></button><a class="dw" href="${i.u}" target="_blank" rel="noopener" title="Послушать в словаре DWDS" aria-label="DWDS">dwds</a></span>`:`<button class="chip" data-t="${esc(i.t)}"><span>${i.h}</span></button>`).join('')}</div></div>`).join('');
 }
 let h='';
 const chip=w=>{const d=Array.isArray(w)?w[0]:w, s=Array.isArray(w)?w[1]:w; const k=s.replace(/[!?.,…]/g,'').trim();
-  return k&&!k.includes(' ')&&!Array.isArray(w)?`<span class="cw"><button class="chip" data-t="${esc(s)}">${esc(d)}</button><a class="dw" href="https://www.dwds.de/?q=${encodeURIComponent(k)}" target="_blank" rel="noopener" title="Послушать в словаре DWDS">DWDS</a></span>`:`<button class="chip" data-t="${esc(s)}">${esc(d)}</button>`};
+  return k&&!k.includes(' ')&&!Array.isArray(w)?`<span class="cw"><button class="chip" data-t="${esc(s)}">${esc(d)}</button><a class="dw" href="https://www.dwds.de/?q=${encodeURIComponent(k)}" target="_blank" rel="noopener" title="Послушать в словаре DWDS" aria-label="DWDS">dwds</a></span>`:`<button class="chip" data-t="${esc(s)}">${esc(d)}</button>`};
 D.LS.forEach(L=>{const n=L.n;
 h+=`<section class="part" id="l${n}-wortschatz" style="--acc:#2F7D6D"><h2>Lektion ${n}: Wortschatz</h2><p class="lead">Слова и фразы урока «${esc(L.title)}».</p>`+
   L.WS.map(([t,c,ws],i)=>`<div class="block" id="l${n}-ws-${i+1}" style="--acc:${c}"><div class="head"><h3>${t}</h3><button class="play all">Все фразы</button></div><div class="chips">${ws.map(chip).join('')}</div></div>`).join('')+`</section>`;
@@ -182,7 +181,7 @@ if(L.RG){
 h+=`<section class="part" id="l${n}-regionen" style="--acc:#2F7D6D"><h2>Lektion ${n}: Grüezi, Servus, Moin!</h2><p class="lead">Синтезатор произносит эти слова «по-книжному», настоящий региональный выговор он не передаёт. Если на устройстве есть австрийский или швейцарский голос, страница возьмёт его. Живое произношение носителей слушайте по ссылкам на Forvo.</p><div class="reg">`+
   L.RG.map(([c,lang,col,ws])=>`<div class="card" style="--acc:${col}"><h3>${c}</h3>${ws.map(([w,where,q])=>`<div class="row"><button class="chip" data-t="${esc(w)}" data-l="${lang}">${esc(w)}</button><span class="where">${esc(where)}</span><a href="https://forvo.com/search/${encodeURIComponent(q)}/" target="_blank" rel="noopener">Носители</a></div>`).join('')}</div>`).join('')+`</div></section>`;}
 });
-h+=`<section class="part" id="vokale" style="--acc:#2E5E8C"><h2>Anhang · Aussprache: гласные</h2><p class="lead">Те же блоки, что в учебнике. Цветом выделены буквы, которые отрабатываем.</p><p class="dwnote">Нажмите на слово, и его прочитает голос устройства. Нажмите <b>DWDS</b> рядом со словом, и откроется онлайн-словарь DWDS: там можно послушать живое произношение (значок динамика). Он показывает словарную форму: например, для «Häuser» — слово «Haus».</p>${wordBlocks(D.V)}</section>`;
+h+=`<section class="part" id="vokale" style="--acc:#2E5E8C"><h2>Anhang · Aussprache: гласные</h2><p class="lead">Те же блоки, что в учебнике. Цветом выделены буквы, которые отрабатываем.</p><p class="dwnote">Нажмите на слово, и его прочитает голос устройства. Нажмите на маленькую серую ссылку <b>dwds</b> рядом со словом, и откроется онлайн-словарь DWDS: там можно послушать живое произношение (значок динамика). Он показывает словарную форму: например, для «Häuser» — слово «Haus».</p>${wordBlocks(D.V)}</section>`;
 h+=`<section class="part" id="konsonanten" style="--acc:#B23A48"><h2>Anhang · Aussprache: согласные</h2><p class="lead">Обратите внимание на пары слов: в них слышна разница между звуками.</p>${wordBlocks(D.K)}</section>`;
 $('#app').innerHTML=h;
 
