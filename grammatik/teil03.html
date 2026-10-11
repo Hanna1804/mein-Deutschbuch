@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grammatik · Teil 3 · Adjektive</title>
+<style>
+:root{--bg:#fff;--band:#E6EEFA;--ink:#1a1a1a;--muted:#555b66;--line:#dfe4ec;--card:#f6f8fb;--ok:#2F7D6D;--okb:#e3f3ee;--no:#B23A48;--nob:#fbeaec;--acc:#1F7A99;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15181d;--band:#1c2533;--ink:#eceff4;--muted:#a6adba;--line:#2c3340;--card:#1d2229;--okb:#173a31;--nob:#3d1d22}}
+:root[data-theme="dark"]{--bg:#15181d;--band:#1c2533;--ink:#eceff4;--muted:#a6adba;--line:#2c3340;--card:#1d2229;--okb:#173a31;--nob:#3d1d22}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.45}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+header{background:var(--band)} header .wrap{padding:24px 18px 18px}
+h1{font-family:Georgia,serif;margin:0;font-size:clamp(26px,6vw,36px)} header p{color:var(--muted);margin:6px 0 0}
+.flag{height:8px;background:linear-gradient(#000 0 33.3%,#C8102E 0 66.6%,#E8B000 0)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav .wrap{display:flex;gap:6px;padding:8px 18px}
+nav a{color:var(--ink);text-decoration:none;font-size:14px;padding:6px 10px;border:1px solid var(--line);border-radius:999px}
+section.les{padding:18px 0 8px;border-bottom:1px solid var(--line)}
+h2{font-family:Georgia,serif;font-size:24px;margin:8px 0 4px}
+.set{margin:18px 0 26px}
+.sethead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sethead h3{margin:0;font-size:18px;color:var(--acc)}
+.score{font-size:14px;color:var(--muted);margin-left:auto}
+.again{font:inherit;font-size:14px;border:1px solid var(--acc);color:var(--acc);background:none;border-radius:999px;padding:5px 12px;cursor:pointer}
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
+.q p{margin:0 0 8px;font-size:17px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{font:inherit;font-size:16px;min-height:44px;padding:8px 14px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.opt:disabled{cursor:default}
+.opt.ok{background:var(--okb);border-color:var(--ok);color:var(--ok);font-weight:700}
+.opt.no{background:var(--nob);border-color:var(--no);color:var(--no);text-decoration:line-through}
+.ex{margin-top:8px;font-size:14px;color:var(--muted);display:none}
+.q.done .ex{display:block}
+.note{font-size:14px;color:var(--muted)}
+.wblock{margin:28px 0 8px;padding:14px 16px;border:2px dashed var(--acc);border-radius:12px}
+.wblock>h3{margin:0;font-family:Georgia,serif;font-size:20px;color:var(--acc)}
+.wblock>p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.wq{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
+.wq p{margin:0 0 6px;font-size:17px}
+.wq .hint{font-size:14px;color:var(--muted);margin:0 0 8px}
+.wq input,.wq textarea{width:100%;resize:vertical;font:inherit;font-size:17px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.wq .ok:is(input,textarea){border-color:var(--ok);background:var(--okb)} .wq .no:is(input,textarea){border-color:var(--no);background:var(--nob)}
+.wrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center}
+.wrow button{font:inherit;font-size:15px;min-height:40px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.wrow .tip:disabled{opacity:.45;cursor:default}
+.wq .tipline{margin:8px 0 0}
+.wrow .chk{border-color:var(--acc);color:#fff;background:var(--acc);font-weight:700}
+.wrow .uml{min-width:36px;padding:4px 6px;font-size:14px;min-height:36px}
+.fb{margin-top:8px;font-size:15px}
+.fb.ok{color:var(--ok)} .fb.no{color:var(--no)} .fb.mid{color:#B26A00}
+.fb small{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+footer{color:var(--muted);font-size:13px;padding:24px 18px 40px}
+</style></head>
+<body>
+<header><div class="wrap"><h1>Teil 3 · Adjektive</h1><p>Online üben: Tippen Sie auf die richtige Antwort. Sie sehen sofort die Lösung und eine kurze Erklärung. Am Ende jedes Punktes: freiwillige Übungen zum Selbst-Schreiben.</p></div></header>
+<div class="flag"></div>
+<nav><div class="wrap"><a href="./">← Alle Teile</a><a href="#g3-6">3.6</a><a href="#fehler">🔁 Meine Fehler</a></div></nav>
+<main class="wrap" id="app"></main>
+<footer class="wrap">Keine Anmeldung, keine Datenspeicherung. „Neue Runde“ mischt die Aufgaben neu.</footer>
+<script>
+const D={"N": "03", "L": [{"id": "g3-6", "title": "3.6 · Komparativ und Superlativ mit Endung", "sets": [{"t": "1 · Mit oder ohne Endung?", "pool": 10, "hint": "Ступень 1: есть существительное после прилагательного или нет?", "items": [{"q": "Die neue Wohnung ist ___ als die alte.", "o": ["größer", "größere"], "e": "После «ist» существительного нет → без окончания."}, {"q": "Wir suchen eine ___ Wohnung.", "o": ["größere", "größer"], "e": "Перед существительным (die Wohnung) → окончание: eine größere."}, {"q": "Mein Bruder ist zwei Jahre ___ als ich.", "o": ["älter", "älterer"], "e": "Существительного нет → älter."}, {"q": "Ich habe einen ___ Bruder.", "o": ["älteren", "älter"], "e": "der Bruder, Akkusativ, einen → älteren."}, {"q": "Heute ist es ___ als gestern.", "o": ["kälter", "kältere"], "e": "Существительного нет → kälter."}, {"q": "Morgen kommt ___ Luft aus dem Norden.", "o": ["kältere", "kälter"], "e": "die Luft, без артикля → kältere."}, {"q": "Kannst du bitte ___ sprechen?", "o": ["langsamer", "langsameren"], "e": "Слово относится к глаголу (sprechen) → без окончания."}, {"q": "Wir brauchen einen ___ Plan.", "o": ["besseren", "besser"], "e": "der Plan, Akkusativ, einen → besseren."}, {"q": "Dein Plan ist gut, aber ihr Plan ist ___.", "o": ["besser", "bessere"], "e": "После «ist» существительного нет → besser."}, {"q": "Ich nehme den ___ Zug.", "o": ["früheren", "früher"], "e": "der Zug, Akkusativ, den → früheren."}, {"q": "Ich komme heute etwas ___.", "o": ["später", "späteren"], "e": "Относится к глаголу (komme) → später."}, {"q": "Gibt es auch ___ Termine?", "o": ["spätere", "später"], "e": "Termine — Plural без артикля → spätere."}, {"q": "Das Handy ist ___, aber die Kamera ist besser.", "o": ["teurer", "teurere"], "e": "Существительного нет → teurer (teuer → teurer, e выпадает)."}, {"q": "Für ein ___ Handy habe ich kein Geld.", "o": ["teureres", "teurer"], "e": "das Handy, Akkusativ, ein → teureres."}]}, {"t": "2 · Welche Endung? (mit Artikel)", "pool": 10, "hint": "Ступень 2: выберите правильную форму. Неправильные варианты — типичные ошибки.", "items": [{"q": "Wir haben ___ Lösung gefunden.", "o": ["eine bessere", "eine besser", "eine mehr gute", "eine besseren"], "e": "die Lösung, Akkusativ, eine → bessere."}, {"q": "Ich warte auf ___ Angebot.", "o": ["ein besseres", "ein bessere", "ein besser", "ein mehr gutes"], "e": "warten auf + Akkusativ, das Angebot, ein → besseres."}, {"q": "Mit ___ Laptop geht alles viel schneller.", "o": ["einem neueren", "einem neuere", "einen neueren", "einem neuer"], "e": "mit + Dativ, der Laptop → einem neueren."}, {"q": "Kennst du ___ Weg?", "o": ["einen kürzeren", "ein kürzerer", "einen kürzerer", "einen mehr kurzen"], "e": "der Weg, Akkusativ → einen kürzeren."}, {"q": "___ Kollegin arbeitet in Teilzeit.", "o": ["Die jüngere", "Die jüngeren", "Die jünger", "Der jüngere"], "e": "die Kollegin, Nominativ, die → jüngere."}, {"q": "Wir sprechen mit ___ Kunden.", "o": ["dem wichtigeren", "den wichtigere", "dem wichtigere", "der wichtigeren"], "e": "mit + Dativ, der Kunde (n-Deklination) → dem wichtigeren Kunden."}, {"q": "Sie hat ___ Job als ich.", "o": ["einen besseren", "einen besser", "ein besseren", "einen besseres"], "e": "der Job, Akkusativ → einen besseren."}, {"q": "Hast du keine ___ Idee?", "o": ["bessere", "besseren", "besser", "besseres"], "e": "die Idee, Akkusativ, keine → bessere."}, {"q": "Die ___ Modelle sind leider ausverkauft.", "o": ["billigeren", "billigere", "billiger", "billigeres"], "e": "Plural с артиклем die → -en: die billigeren."}, {"q": "Ich kaufe mir ___ Fahrrad.", "o": ["ein leichteres", "ein leichtere", "ein leichterer", "einen leichteren"], "e": "das Fahrrad, Akkusativ, ein → leichteres."}, {"q": "Wir suchen ___ Mitarbeiter mit mehr Erfahrung.", "o": ["einen älteren", "einen älterer", "ein älteren", "einen mehr alten"], "e": "der Mitarbeiter, Akkusativ → einen älteren."}, {"q": "In ___ Stadt gibt es mehr Jobs.", "o": ["einer größeren", "einer größere", "eine größeren", "einem größeren"], "e": "in + wo? → Dativ, die Stadt → einer größeren."}, {"q": "Wir sind in ___ Wohnung umgezogen.", "o": ["eine größere", "einer größeren", "eine größeren", "ein größeres"], "e": "umziehen in + wohin? → Akkusativ: eine größere."}, {"q": "Er fährt jetzt ___ Auto als früher.", "o": ["ein kleineres", "ein kleinere", "ein kleiner", "einen kleineren"], "e": "das Auto, Akkusativ, ein → kleineres."}, {"q": "Das ist ___ Problem, als ich dachte.", "o": ["ein größeres", "ein größere", "ein mehr großes", "ein größerer"], "e": "das Problem, Nominativ, ein → größeres."}]}, {"t": "3 · Ohne Artikel", "pool": 8, "hint": "Ступень 2 (B1–B2): без артикля окончание показывает падеж — как в 3.4.", "items": [{"q": "Für ___ Kinder ist der Eintritt frei.", "o": ["jüngere", "jüngeren", "jünger", "jüngerer"], "e": "Plural без артикля, Akkusativ → jüngere."}, {"q": "Mit ___ Gehalt könnte ich eine größere Wohnung mieten.", "o": ["höherem", "höheren", "höhere", "hoherem"], "e": "das Gehalt, mit + Dativ, без артикля → -em (как dem). hoch → höher."}, {"q": "Bei ___ Wetter fahren wir mit dem Rad.", "o": ["besserem", "besseren", "bessere", "besser"], "e": "das Wetter, bei + Dativ, без артикля → besserem."}, {"q": "Wir suchen Mitarbeiter mit ___ Erfahrung.", "o": ["längerer", "längeren", "längere", "längerem"], "e": "die Erfahrung, mit + Dativ, без артикля → -er (как der)."}, {"q": "___ Wohnungen sind in der Stadt kaum zu finden.", "o": ["Günstigere", "Günstigeren", "Günstiger", "Günstigerer"], "e": "Plural, Nominativ, без артикля → günstigere."}, {"q": "Bei ___ Temperaturen bleiben die Kinder drinnen.", "o": ["höheren", "höhere", "höherem", "hoheren"], "e": "Plural, Dativ (bei) → -en: höheren."}, {"q": "Ich trinke lieber ___ Kaffee.", "o": ["stärkeren", "stärkerer", "stärkere", "stärkerem"], "e": "der Kaffee, Akkusativ, без артикля → -en (как den)."}, {"q": "Mit ___ Grüßen", "o": ["besten", "beste", "bestem", "gutesten"], "e": "Устойчивое выражение в письмах: Mit besten Grüßen."}, {"q": "3-Zimmer-Wohnung in ___ Lage zu vermieten.", "o": ["bester", "beste", "besten", "bestem"], "e": "Из объявлений: in bester Lage. die Lage, Dativ, без артикля → -er."}, {"q": "Ich brauche ___ Zeit.", "o": ["mehr", "mehre", "mehrere", "mehren"], "e": "mehr никогда не получает окончание. (mehrere = несколько — другое слово!)"}, {"q": "Heute habe ich ___ Stress als gestern.", "o": ["weniger", "wenigeren", "wenigere", "weniges"], "e": "weniger никогда не получает окончание."}, {"q": "___ Grüße an deine Familie!", "o": ["Herzlichste", "Herzlichsten", "Herzlichster", "Am herzlichsten"], "e": "Plural, Nominativ, без артикля → herzlichste."}]}, {"t": "4 · Superlativ oder „am …“?", "pool": 10, "hint": "Ступень 2: есть существительное → der/die/das …-ste. Нет → am …-sten.", "items": [{"q": "Das ist ___ Idee!", "o": ["die beste", "am besten", "die gutste", "das beste"], "e": "die Idee → die beste. gut → best- (неправильная форма)."}, {"q": "Mit dem Zug kommst du ___ an.", "o": ["am schnellsten", "der schnellste", "am schnellste", "schnellsten"], "e": "Существительного нет → am schnellsten."}, {"q": "Entschuldigung, wo ist ___ Haltestelle?", "o": ["die nächste", "die nahste", "am nächsten", "die näheste"], "e": "nah – näher – nächst-. die nächste Haltestelle = ближайшая остановка."}, {"q": "___ Leute arbeiten im Büro.", "o": ["Die meisten", "Meisten", "Am meisten", "Die meiste"], "e": "die meisten = большинство. Артикль обязателен!"}, {"q": "Welche Jahreszeit magst du ___?", "o": ["am liebsten", "die liebste", "am meisten liebsten", "am gernsten"], "e": "gern – lieber – am liebsten."}, {"q": "Was ist deine ___ Serie?", "o": ["liebste", "am liebsten", "gernste", "lieberste"], "e": "deine + Superlativ: deine liebste Serie."}, {"q": "Das ist ___ Gebäude in Frankfurt.", "o": ["das höchste", "das hochste", "am höchsten", "das höheste"], "e": "hoch – höher – höchst-."}, {"q": "Wir haben ___ Ticket genommen.", "o": ["das billigste", "das billigeste", "am billigsten", "den billigsten"], "e": "billig → billigst-: только -st-, без лишнего e."}, {"q": "Berlin ist ___ Stadt Deutschlands.", "o": ["die größte", "die größeste", "am größten", "die großte"], "e": "groß → größt- (не größeste)."}, {"q": "Er ist ___ Mitarbeiter im Team.", "o": ["der älteste", "der alteste", "der ältste", "am ältesten"], "e": "alt → ältest-: после -t добавляем -e-."}, {"q": "Im Juli ist es hier ___.", "o": ["am heißesten", "am heißten", "der heißeste", "am heißsten"], "e": "heiß → am heißesten: после ß добавляем -e-."}, {"q": "Mit ___ Kollegen verstehe ich mich gut.", "o": ["den meisten", "die meisten", "meisten", "dem meisten"], "e": "mit + Dativ Plural → den meisten."}, {"q": "Wer verdient in eurer Firma ___?", "o": ["am meisten", "die meisten", "am mehrsten", "meistens"], "e": "viel – mehr – am meisten. (meistens = обычно — другое слово!)"}, {"q": "Das war ___ Tag meines Lebens!", "o": ["der schönste", "am schönsten", "der schöneste", "das schönste"], "e": "der Tag → der schönste."}]}, {"t": "5 · Fehlerdetektiv", "pool": 8, "hint": "Ступень 3: какое слово неправильное?", "items": [{"q": "Wir suchen eine mehr billige Wohnung.", "o": ["mehr", "suchen", "eine", "Wohnung"], "e": "✓ eine billigere Wohnung. «Более» = -er-, слово mehr не нужно."}, {"q": "Ich möchte einen besser Job finden.", "o": ["besser", "einen", "möchte", "finden"], "e": "✓ einen besseren Job — перед существительным нужно окончание."}, {"q": "Das ist am besten Lösung.", "o": ["am", "Lösung", "ist", "Das"], "e": "✓ die beste Lösung — есть существительное, значит der/die/das."}, {"q": "Meisten Leute fahren mit dem Bus.", "o": ["Meisten", "Leute", "fahren", "Bus"], "e": "✓ Die meisten Leute — артикль обязателен."}, {"q": "Sie hat ein hocheres Gehalt als ich.", "o": ["hocheres", "ein", "hat", "als"], "e": "✓ ein höheres Gehalt (hoch → höher, без c)."}, {"q": "Wir haben jetzt mehre Zeit für die Familie.", "o": ["mehre", "haben", "Zeit", "für"], "e": "✓ mehr Zeit — mehr не склоняется."}, {"q": "Das ist das teuerere Modell.", "o": ["teuerere", "das", "Modell", "ist"], "e": "✓ das teurere Modell (teuer → teurer, e выпадает)."}, {"q": "Mit einem schnelleres Internet könnte ich im Homeoffice arbeiten.", "o": ["schnelleres", "einem", "Internet", "könnte"], "e": "✓ mit einem schnelleren Internet — Dativ."}, {"q": "Berlin ist die größeste Stadt Deutschlands.", "o": ["größeste", "Stadt", "ist", "die"], "e": "✓ die größte Stadt."}, {"q": "Ich trinke Tee am liebsten als Kaffee.", "o": ["am liebsten", "trinke", "Tee", "Kaffee"], "e": "✓ lieber … als: сравниваем две вещи → Komparativ."}]}], "write": [{"t": "S1 · Formen schreiben", "pool": 10, "hint": "Напишите только пропущенное слово.", "items": [{"q": "Mein Laptop ist zu langsam. Ich brauche einen ___ Laptop.", "h": "schnell → Komparativ", "a": ["schnelleren"], "e": "der Laptop, Akkusativ, einen → -en.", "tip": "Akkusativ, maskulin"}, {"q": "Die Wohnung ist zu klein. Wir suchen eine ___ Wohnung.", "h": "groß → Komparativ", "a": ["größere"], "e": "die Wohnung, eine → -e.", "tip": "Umlaut!"}, {"q": "Mit einem ___ Gehalt könnte ich mehr sparen.", "h": "hoch → Komparativ", "a": ["höheren"], "e": "mit + Dativ → einem höheren. hoch → höher.", "tip": "ohne c"}, {"q": "Wir nehmen das ___ Zimmer.", "h": "billig → Superlativ", "a": ["billigste"], "e": "das Zimmer, das → billigste.", "tip": ""}, {"q": "Entschuldigung, wo ist die ___ Apotheke?", "h": "nah → Superlativ", "a": ["nächste"], "e": "nah – näher – nächst-.", "tip": "unregelmäßig"}, {"q": "Bei ___ Wetter bleiben wir zu Hause.", "h": "schlecht → Komparativ", "a": ["schlechterem"], "e": "bei + Dativ, das Wetter, без артикля → -em.", "tip": "ohne Artikel, Dativ"}, {"q": "Im Winter brauche ich ___ Schuhe.", "h": "warm → Komparativ", "a": ["wärmere"], "e": "Plural без артикля → -e.", "tip": "Umlaut!"}, {"q": "Das war der ___ Urlaub unseres Lebens.", "h": "schön → Superlativ", "a": ["schönste"], "e": "der Urlaub, der → schönste.", "tip": ""}, {"q": "Sie arbeitet jetzt bei einer ___ Firma.", "h": "klein → Komparativ", "a": ["kleineren"], "e": "bei + Dativ, die Firma → einer kleineren.", "tip": ""}, {"q": "Gibt es auch eine ___ Verbindung?", "h": "direkt → Komparativ", "a": ["direktere"], "e": "die Verbindung, eine → direktere.", "tip": ""}, {"q": "Ich kaufe mir ein ___ Handy.", "h": "teuer → Komparativ", "a": ["teureres"], "e": "teuer → teurer (e выпадает) + -es.", "tip": "e fällt weg"}, {"q": "___ Kinder sitzen vorne.", "h": "klein → Komparativ, ohne Artikel", "a": ["Kleinere"], "e": "Plural без артикля → kleinere. В начале предложения — с большой буквы.", "tip": ""}, {"q": "Mit ___ Grüßen", "h": "gut → Superlativ, ohne Artikel", "a": ["besten"], "e": "Устойчивое выражение: Mit besten Grüßen.", "tip": ""}, {"q": "Das ist die ___ Frage.", "h": "wichtig → Superlativ", "a": ["wichtigste"], "e": "die Frage, die → wichtigste.", "tip": ""}]}, {"t": "S2 · Sätze bauen", "pool": 0, "hint": "Составьте предложение в Präsens. Слова можно переставлять.", "items": [{"q": "wir / brauchen / ein Auto / groß (Komparativ)", "h": "Präsens", "a": ["Wir brauchen ein größeres Auto."], "e": "", "tip": ""}, {"q": "er / haben / jetzt / einen Job / gut (Komparativ)", "h": "Präsens", "a": ["Er hat jetzt einen besseren Job.", "Jetzt hat er einen besseren Job."], "e": "", "tip": ""}, {"q": "das / sein / die Idee / gut (Superlativ)", "h": "Präsens", "a": ["Das ist die beste Idee."], "e": "", "tip": ""}, {"q": "die meisten Kollegen / fahren / mit dem Rad / zur Arbeit", "h": "Präsens", "a": ["Die meisten Kollegen fahren mit dem Rad zur Arbeit.", "Die meisten Kollegen fahren zur Arbeit mit dem Rad."], "e": "", "tip": ""}, {"q": "ich / trinken / Tee / gern (Komparativ) / als Kaffee", "h": "Präsens", "a": ["Ich trinke Tee lieber als Kaffee.", "Ich trinke lieber Tee als Kaffee."], "e": "", "tip": ""}, {"q": "sie / suchen / eine Stelle / mit / Arbeitszeiten / flexibel (Komparativ)", "h": "Präsens", "a": ["Sie sucht eine Stelle mit flexibleren Arbeitszeiten."], "e": "flexibel → flexibler (e выпадает); mit + Dativ Plural → -en.", "tip": ""}]}]}]};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+
+// ---------- Meine Fehler: ошибки сохраняются на устройстве ----------
+const FKEY='grfehler'+D.N;
+let ERR={}; try{ERR=JSON.parse(localStorage.getItem(FKEY)||'{}')}catch(e){}
+const saveErr=()=>{try{localStorage.setItem(FKEY,JSON.stringify(ERR))}catch(e){} updErrBox()};
+const stitle=(set,it)=>it._src||set.t.replace(/^\S+ · /,'');
+const eid=(set,it)=>stitle(set,it)+'|'+it.q;
+function addErr(set,it,kind){const x=Object.assign({},it,{_src:stitle(set,it)});ERR[eid(set,it)]={k:kind,t:x._src,it:x};saveErr()}
+function delErr(set,it){const id=eid(set,it); if(ERR[id]){delete ERR[id];saveErr()}}
+function updErrBox(){const b=document.querySelector('#errbox'); if(!b)return; const n=Object.keys(ERR).length;
+  b.querySelector('.ecount').textContent=n?`${n} Aufgabe${n===1?'':'n'} mit Fehlern gespeichert.`:'Noch keine Fehler gespeichert – super! Wenn Sie sich irren, landet die Aufgabe automatisch hier.';
+  b.querySelectorAll('.ebtn').forEach(x=>x.disabled=!n)}
+function renderSet(el,set){
+  const items=set.pool?shuffle(set.items).slice(0,set.pool):set.items;
+  let ok=0,done=0; const wrong=[]; const rb=el.querySelector('.retry'); if(rb) rb.remove();
+  el.querySelector('.qs').innerHTML=items.map((it,i)=>`<div class="q" data-i="${i}"><p>${esc(it.q)}</p><div class="opts">${shuffle(it.o).map(o=>`<button class="opt" data-v="${esc(o)}">${esc(o)}</button>`).join('')}</div>${it.e?`<div class="ex">${esc(it.e)}</div>`:''}</div>`).join('');
+  const sc=el.querySelector('.score'); const upd=()=>sc.textContent=`${ok} / ${items.length} richtig`; upd();
+  el.querySelectorAll('.q').forEach(q=>{
+    const it=items[+q.dataset.i];
+    q.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      if(q.classList.contains('done'))return;
+      q.classList.add('done'); done++;
+      q.querySelectorAll('.opt').forEach(x=>{x.disabled=true; if(x.dataset.v===it.o[0]) x.classList.add('ok')});
+      if(b.dataset.v===it.o[0]){ok++; delErr(set,it)} else {b.classList.add('no'); wrong.push(it); addErr(set,it,'c')}
+      upd(); if(done===items.length){ sc.textContent+=ok===items.length?' – super!':''; if(wrong.length) retry(el,set,wrong,renderSet) }
+    });
+  });
+}
+
+// ---------- Письменные задания ----------
+const unq=s=>s.normalize('NFC').replace(/[„“”"‚‘’']/g,'').replace(/\s+/g,' ').replace(/\s+([,.!?])/g,'$1').trim().replace(/[.!?]+$/,'').trim();
+const noC=s=>s.replace(/,/g,'');
+const fold=s=>s.replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/Ä/g,'Ae').replace(/Ö/g,'Oe').replace(/Ü/g,'Ue').replace(/ß/g,'ss');
+function judge(inp,acc){
+  const u=unq(inp); if(!u) return {k:'empty'};
+  for(const a0 of acc){const a=unq(a0);
+    if(u===a) return {k:'ok'};
+    if(noC(u)===noC(a)) return {k:'ok',tip:'Achten Sie auf das Komma.'};
+    if(fold(noC(u))===fold(noC(a))) return {k:'ok',tip:'Richtig! Schöner mit ä, ö, ü, ß: '+a0};
+  }
+  for(const a0 of acc){const a=unq(a0);
+    if(fold(noC(u)).toLowerCase()===fold(noC(a)).toLowerCase()) return {k:'mid',tip:'Fast! Prüfen Sie die Groß- und Kleinschreibung.'};
+    const m=a.match(/^(der|die|das) (.+)$/); if(m&&fold(u).toLowerCase()===fold(m[2]).toLowerCase()) return {k:'mid',tip:'Fast! Schreiben Sie das Nomen mit Artikel.'};
+  }
+  return {k:'no'};
+}
+function renderWrite(el,set){
+  const items=set.pool?shuffle(set.items).slice(0,set.pool):set.items;
+  let ok=0, nfin=0; const wrong=[]; const rb=el.querySelector('.retry'); if(rb) rb.remove();
+  const finish=()=>{ nfin++; if(nfin===items.length && wrong.length) retry(el,set,wrong,renderWrite) };
+  el.querySelector('.qs').innerHTML=items.map((it,i)=>`<div class="wq" data-i="${i}"><p>${esc(it.q)}</p>${it.h?`<p class="hint">${esc(it.h)}</p>`:''}
+   ${it.a[0].length>28?'<textarea rows="2" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Antwort"></textarea>':'<input type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Antwort">'}
+   ${it.tip?`<p class="hint tipline" hidden>💡 ${esc(it.tip)}</p>`:''}<div class="wrow"><button class="chk">Prüfen</button>${['ä','ö','ü','ß','Ä','Ö','Ü'].map(c=>`<button class="uml" data-c="${c}">${c}</button>`).join('')}${it.tip?'<button class="tip">Tipp</button>':''}<button class="sol">Lösung zeigen</button></div>
+   <div class="fb"></div></div>`).join('');
+  const sc=el.querySelector('.score'); const upd=()=>sc.textContent=`${ok} / ${items.length} richtig`; upd();
+  el.querySelectorAll('.wq').forEach(q=>{
+    const it=items[+q.dataset.i], inp=q.querySelector('input,textarea'), fb=q.querySelector('.fb'); let fin=false, marked=false;
+    const show=(cls,html)=>{fb.className='fb '+cls; fb.innerHTML=html};
+    const sol=()=>`<small>Lösung: <b>${esc(it.a[0])}</b>${it.a.length>1?' · auch richtig: '+it.a.slice(1).map(esc).join(' · '):''}${it.e?'<br>'+esc(it.e):''}</small>`;
+    const check=()=>{ if(fin) return; const r=judge(inp.value,it.a);
+      if(r.k==='empty'){show('mid','Bitte schreiben Sie zuerst eine Antwort.');return}
+      if(r.k==='ok'){fin=true; ok++; upd(); delErr(set,it); inp.className='ok'; inp.readOnly=true; show('ok','Richtig!'+(r.tip?' '+esc(r.tip):'')+sol()); finish(); return}
+      if(r.k==='no'&&!marked){marked=true; wrong.push(it); addErr(set,it,'w')}
+      inp.className='no'; show(r.k==='mid'?'mid':'no',(r.k==='mid'?esc(r.tip):'Leider nicht richtig.')+' Versuchen Sie es noch einmal – oder tippen Sie auf „Lösung zeigen“.');
+    };
+    q.querySelector('.chk').onclick=check;
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();check()}});
+    const tb=q.querySelector('.tip'); if(tb) tb.onclick=()=>{q.querySelector('.tipline').hidden=false; tb.disabled=true; inp.focus()};
+    q.querySelector('.sol').onclick=()=>{ if(fin) return; fin=true; inp.readOnly=true; if(!marked){marked=true; wrong.push(it); addErr(set,it,'w')} show('no','Schauen Sie sich die Lösung an:'+sol()); finish(); };
+    q.querySelectorAll('.uml').forEach(b=>{b.onmousedown=e=>e.preventDefault(); b.onclick=()=>{ if(fin) return;
+      const s=inp.selectionStart??inp.value.length, e2=inp.selectionEnd??s; inp.value=inp.value.slice(0,s)+b.dataset.c+inp.value.slice(e2);
+      inp.focus(); inp.setSelectionRange(s+1,s+1); }});
+  });
+}
+
+function retry(el,set,wrong,fn){
+  const b=document.createElement('button'); b.className='again retry'; b.style.marginTop='6px';
+  b.textContent=`🔁 Nur die Fehler wiederholen (${wrong.length})`;
+  b.onclick=()=>{fn(el,{t:set.t,pool:0,items:wrong.map(it=>Object.assign({},it,{_src:stitle(set,it)}))}); el.scrollIntoView({behavior:'smooth'})};
+  el.appendChild(b);
+}
+let h='';
+D.L.forEach(L=>{
+  h+=`<section class="les" id="${L.id}"><h2>${esc(L.title)}</h2>`;
+  L.sets.forEach((s,i)=>{h+=`<div class="set" data-l="${L.id}" data-s="${i}"><div class="sethead"><h3>${esc(s.t)}</h3><span class="score"></span>${s.pool?'<button class="again">Neue Runde</button>':''}</div>${s.hint?`<p class="note">${esc(s.hint)}</p>`:''}<div class="qs"></div></div>`});
+  if(L.write&&L.write.length){
+    h+=`<div class="wblock"><h3>✍ Selbst schreiben</h3><p>Hier tippen Sie die Antwort selbst. Diese Übungen sind freiwillig – Sie können sie auch überspringen.</p>`;
+    L.write.forEach((s,i)=>{h+=`<div class="set" data-l="${L.id}" data-w="${i}"><div class="sethead"><h3>${esc(s.t)}</h3><span class="score"></span>${s.pool?'<button class="again">Neue Runde</button>':''}</div>${s.hint?`<p class="note">${esc(s.hint)}</p>`:''}<div class="qs"></div></div>`});
+    h+=`</div>`;
+  }
+  h+=`</section>`;
+});
+h=`<section class="les" id="fehler"><div id="errbox" class="wblock" style="border-color:var(--no)"><h3 style="color:var(--no)">🔁 Meine Fehler</h3><p class="ecount"></p>
+  <div class="wrow"><button class="chk ebtn" id="errgo" style="background:var(--no);border-color:var(--no)">Fehler üben</button><button class="ebtn" id="errclr">Liste leeren</button></div>
+  <div id="errsets"></div></div></section>`+h;
+document.querySelector('#app').innerHTML=h;
+updErrBox();
+document.querySelector('#errgo').onclick=()=>{
+  const all=Object.values(ERR), ch=all.filter(x=>x.k==='c'), wr=all.filter(x=>x.k==='w');
+  const mk=(id,title)=>`<div class="set" id="${id}"><div class="sethead"><h3>${title}</h3><span class="score"></span></div><div class="qs"></div></div>`;
+  const box=document.querySelector('#errsets'); box.innerHTML=(ch.length?mk('errc','Antippen'):'')+(wr.length?mk('errw','Selbst schreiben'):'');
+  const fake=(arr)=>({t:'Fehler',pool:0,items:arr.map(x=>x.it)});   // it._src помнит исходное упражнение
+  if(ch.length) renderSet(document.querySelector('#errc'),fake(ch));
+  if(wr.length) renderWrite(document.querySelector('#errw'),fake(wr));
+};
+document.querySelector('#errclr').onclick=()=>{if(confirm('Alle gespeicherten Fehler löschen?')){ERR={};saveErr();document.querySelector('#errsets').innerHTML=''}};
+document.querySelectorAll('.set').forEach(el=>{
+  const L=D.L.find(x=>x.id===el.dataset.l);
+  const w=el.dataset.w!==undefined, s=w?L.write[+el.dataset.w]:L.sets[+el.dataset.s], r=w?renderWrite:renderSet;
+  r(el,s);
+  const a=el.querySelector('.again'); if(a) a.onclick=()=>r(el,s);
+});
+</script>
+</body></html>
