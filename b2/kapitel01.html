@@ -80,7 +80,9 @@ details{padding:4px 14px 10px}
 summary{cursor:pointer;color:var(--acc);font-weight:600;padding:6px 0}
 .hoer{margin-top:22px}
 .hh{font-size:22px;color:var(--acc)}
-.cw{display:inline-flex;align-items:stretch}
+.cw{display:flex;align-items:stretch;width:100%;max-width:100%}
+.cw .chip{flex:1;min-width:0;white-space:normal;overflow-wrap:break-word;text-align:left;flex-wrap:wrap;row-gap:2px}
+.cw .chip small{flex-basis:100%;padding-left:16px}
 .cw .chip{border-top-right-radius:0;border-bottom-right-radius:0}
 .dw{display:inline-flex;align-items:center;padding:0 8px;font-size:11px;font-weight:700;letter-spacing:.03em;color:var(--acc);border:1px solid var(--line);border-left:none;border-radius:0 999px 999px 0;text-decoration:none;background:var(--bg)}
 .dw:hover{background:var(--chip)}
