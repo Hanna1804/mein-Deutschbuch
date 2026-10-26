@@ -20,8 +20,9 @@ select,.chip,.btn{font:inherit;font-size:15px;border:1px solid var(--line);backg
 .cats{gap:6px;margin-top:6px}
 .cats .chip{white-space:nowrap;font-size:14px;padding:5px 11px}
 .chip[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
-.mode{display:flex;width:100%;border:1px solid var(--line);border-radius:999px;overflow:hidden}
-.mode button{flex:1;font:inherit;font-size:13.5px;border:0;background:var(--bg);color:var(--ink);padding:7px 6px;cursor:pointer;white-space:nowrap}
+.mode{display:flex;width:100%;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.mode button{flex:1;font:inherit;font-size:13.5px;line-height:1.25;border:0;background:var(--bg);color:var(--ink);padding:7px 6px;cursor:pointer}
+.mode button+button{border-left:1px solid var(--line)}
 .mode button[aria-pressed="true"]{background:var(--acc);color:#fff}
 .stat{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:14px;margin:8px 0}
 .bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:2px 0 12px} .bar i{display:block;height:100%;background:var(--ok);width:0}
@@ -55,7 +56,7 @@ footer{color:var(--muted);font-size:13px;padding:22px 16px 40px}
 <main class="wrap">
  <div class="ctrl">
   <select id="les" aria-label="Lektion"></select>
-  <div class="mode" role="group" aria-label="Richtung"><button id="m1" aria-pressed="true">Deutsch &#x2192; Bedeutung</button><button id="m2" aria-pressed="false">Bedeutung &#x2192; Deutsch</button></div>
+  <div class="mode" role="group" aria-label="Richtung"><button id="m0" aria-pressed="true">Deutsch &#x2192; Bedeutung</button><button id="m1" aria-pressed="false">Bedeutung &#x2192; Deutsch</button><button id="m2" aria-pressed="false">Bedeutung + &#xdc;bersetzung &#x2192; Deutsch</button></div>
  </div>
  <div class="ctrl cats" id="cats"></div>
  <div class="stat"><span id="cnt"></span><button class="link" id="reset">Fortschritt l&#xf6;schen</button></div>
@@ -80,7 +81,7 @@ if('speechSynthesis' in window){loadV();speechSynthesis.onvoiceschanged=loadV}
 function say(t){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);if(voice){u.voice=voice;u.lang=voice.lang}else u.lang='de-DE';u.rate=.9;speechSynthesis.speak(u)}
 // ---- Auswahl
 const CATS=[...new Set(D.C.map(c=>c.c))];
-let les='alle', cats=new Set(CATS.filter(c=>c!=='Alltagsdeutsch')), rev=false, queue=[], cur=null, flipped=false;
+let les='alle', cats=new Set(CATS.filter(c=>c!=='Alltagsdeutsch')), mode=0, queue=[], cur=null, flipped=false;
 $('#les').innerHTML='<option value="alle">Alle Lektionen</option>'+D.L.map(l=>`<option value="${esc(l.n)}">${l.n==='M'?'Deutsch in den Medien':'Lektion '+esc(l.n)} \u00b7 ${esc(l.t)}</option>`).join('');
 $('#cats').innerHTML=CATS.map(c=>`<button class="chip" data-c="${esc(c)}" aria-pressed="${cats.has(c)}">${esc(c)}</button>`).join('');
 const pool=()=>D.C.filter(c=>(les==='alle'||c.l===les)&&cats.has(c.c));
@@ -93,9 +94,11 @@ function face(c,front){
   const exm=c.e?`<div class="ex"><i>${esc(c.e)}</i> <button class="say mini" aria-label="Beispiel anh\u00f6ren" data-say="2">\ud83d\udd0a</button></div>`:'';
   const ru=c.r?`<div class="ru">${esc(c.r)}</div>`:'';
   const expl=`<div class="expl">${esc(c.b)}</div>`;
-  if(!rev) return front?de:expl+exm+ru;
-  // \u041e\u0431\u0440\u0430\u0442\u043d\u043e\u0435 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435: \u0441\u043f\u0435\u0440\u0435\u0434\u0438 \u0442\u043e\u043b\u044c\u043a\u043e \u043e\u0431\u044a\u044f\u0441\u043d\u0435\u043d\u0438\u0435 (\u043f\u0440\u0438\u043c\u0435\u0440 \u0432\u044b\u0434\u0430\u043b \u0431\u044b \u0441\u043b\u043e\u0432\u043e), \u0441\u0437\u0430\u0434\u0438 \u2014 \u0432\u0441\u0451.
-  return front?`<div class="expl">${esc(c.q?c.q:c.b)}</div>${c.q?`<div class="expl" style="font-size:15px;font-weight:400">${esc(c.b)}</div>`:''}`:de+exm+ru;
+  if(mode===0) return front?de:expl+exm+ru;
+  // \u041e\u0431\u0440\u0430\u0442\u043d\u043e\u0435 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435: \u0441\u043f\u0435\u0440\u0435\u0434\u0438 \u043e\u0431\u044a\u044f\u0441\u043d\u0435\u043d\u0438\u0435 (\u043f\u0440\u0438\u043c\u0435\u0440 \u0432\u044b\u0434\u0430\u043b \u0431\u044b \u0441\u043b\u043e\u0432\u043e), \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 2 \u0435\u0449\u0451 \u0438 \u043f\u0435\u0440\u0435\u0432\u043e\u0434; \u0441\u0437\u0430\u0434\u0438 \u2014 \u0432\u0441\u0451.
+  const q=`<div class="expl">${esc(c.q?c.q:c.b)}</div>${c.q?`<div class="expl" style="font-size:15px;font-weight:400">${esc(c.b)}</div>`:''}`;
+  if(mode===2) return front?q+ru:de+exm+ru;
+  return front?q:de+exm+ru;
 }
 function next(){
   stats(); flipped=false;
@@ -118,8 +121,10 @@ function answer(ok){if(!cur)return;queue.shift();
   next()}
 $('#les').onchange=e=>{les=e.target.value;start(false)};
 $('#cats').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;const c=b.dataset.c;cats.has(c)?cats.delete(c):cats.add(c);b.setAttribute('aria-pressed',cats.has(c));start(false)};
-$('#m1').onclick=()=>{rev=false;$('#m1').setAttribute('aria-pressed','true');$('#m2').setAttribute('aria-pressed','false');next()};
-$('#m2').onclick=()=>{rev=true;$('#m2').setAttribute('aria-pressed','true');$('#m1').setAttribute('aria-pressed','false');next()};
+// \u0420\u0435\u0436\u0438\u043c \u043a\u0430\u0440\u0442\u043e\u0447\u0435\u043a \u0437\u0430\u043f\u043e\u043c\u0438\u043d\u0430\u0435\u0442\u0441\u044f \u043d\u0430 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435 (\u043e\u0431\u0449\u0438\u0439 \u0434\u043b\u044f \u0432\u0441\u0435\u0445 \u0433\u043b\u0430\u0432).
+function setMode(m){mode=m;[0,1,2].forEach(i=>$('#m'+i).setAttribute('aria-pressed',i===m));try{localStorage.setItem('b2kartenmodus',m)}catch(e){}}
+try{const m=+localStorage.getItem('b2kartenmodus');if(m===1||m===2)setMode(m)}catch(e){}
+[0,1,2].forEach(i=>$('#m'+i).onclick=()=>{setMode(i);next()});
 $('#reset').onclick=()=>{if(confirm('Fortschritt f\u00fcr dieses Kapitel l\u00f6schen?')){known.clear();save();start(false)}};
 document.addEventListener('keydown',e=>{if(e.target.tagName==='SELECT')return;if(e.key===' '){e.preventDefault();flip()}else if(e.key==='ArrowRight')answer(true);else if(e.key==='ArrowLeft')answer(false)});
 start(false);
