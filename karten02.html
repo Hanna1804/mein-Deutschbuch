@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deutsch A1 · Karteikarten · Kapitel 2</title>
+<style>
+:root{--bg:#fff;--band:#E6EEFA;--ink:#1a1a1a;--muted:#555b66;--line:#dfe4ec;--card:#f6f8fb;--ok:#2F7D6D;--okb:#e3f3ee;--no:#B23A48;--nob:#fbeaec;--acc:#8A5A9E;--ru:#8A93A0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15181d;--band:#1c2533;--ink:#eceff4;--muted:#a6adba;--line:#2c3340;--card:#1d2229;--okb:#173a31;--nob:#3d1d22;--ru:#9aa3b2}}
+:root[data-theme="dark"]{--bg:#15181d;--band:#1c2533;--ink:#eceff4;--muted:#a6adba;--line:#2c3340;--card:#1d2229;--okb:#173a31;--nob:#3d1d22;--ru:#9aa3b2}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.45;overflow-x:hidden}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px}
+header{background:var(--band)} header .wrap{padding:12px 16px 10px}
+h1{font-family:Georgia,serif;margin:0;font-size:clamp(20px,5.5vw,30px);line-height:1.2} header p{color:var(--muted);margin:4px 0 0;font-size:14px}
+header a{color:var(--muted);font-size:14px}
+.flag{height:8px;background:linear-gradient(#000 0 33.3%,#C8102E 0 66.6%,#E8B000 0)}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px;align-items:center}
+#les{width:100%;max-width:100%}
+select,.chip,.btn{font:inherit;font-size:15px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:7px 12px;cursor:pointer}
+.cats{gap:6px;margin-top:6px}
+.cats .chip{white-space:nowrap;font-size:14px;padding:5px 11px}
+.chip[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#fff}
+.mode{display:flex;width:100%;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.mode button{flex:1;font:inherit;font-size:13.5px;border:0;background:var(--bg);color:var(--ink);padding:7px 6px;cursor:pointer;white-space:nowrap}
+.mode button[aria-pressed="true"]{background:var(--acc);color:#fff}
+.stat{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:14px;margin:8px 0}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:2px 0 12px} .bar i{display:block;height:100%;background:var(--ok);width:0}
+.cardbox{perspective:1200px;margin:6px 0 14px}
+.kcard{position:relative;min-height:210px;cursor:pointer;transition:transform .45s;transform-style:preserve-3d;touch-action:pan-y}
+.kcard.flip{transform:rotateY(180deg)}
+.side{position:absolute;inset:0;overflow-wrap:anywhere;hyphens:auto;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:10px}
+.back{transform:rotateY(180deg)}
+.tag{position:absolute;top:10px;left:14px;font-size:12px;color:var(--muted)}
+.main{font-size:clamp(22px,6vw,30px);font-weight:700;line-height:1.25}
+.sub{font-size:16px;color:var(--muted)}
+.ru{font-size:15px;color:var(--ru);font-style:italic}
+.expl{font-size:clamp(17px,4.6vw,20px);font-weight:600;line-height:1.35}
+.ex{font-size:15px;line-height:1.45;max-width:34em}
+.say.mini{width:30px;height:30px;font-size:14px;vertical-align:middle;margin-left:2px}
+.ru{margin-top:2px}
+.say{font:inherit;font-size:20px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;width:44px;height:44px;cursor:pointer}
+.hintflip{position:absolute;bottom:10px;font-size:12px;color:var(--muted)}
+.acts{display:flex;gap:10px;position:sticky;bottom:calc(8px + env(safe-area-inset-bottom,0px));background:var(--bg);padding:6px 0}
+.acts button{flex:1;font:inherit;font-size:17px;font-weight:700;min-height:54px;border-radius:12px;border:2px solid;cursor:pointer;background:var(--bg)}
+.again{border-color:var(--no);color:var(--no)} .known{border-color:var(--ok);color:var(--ok)}
+.acts button:disabled{opacity:.35;cursor:default}
+.done{text-align:center;padding:30px 10px;color:var(--muted)} .done b{display:block;font-size:22px;color:var(--ink);margin-bottom:6px}
+.small{font-size:13px;color:var(--muted)}
+.link{background:none;border:0;color:var(--muted);text-decoration:underline;font:inherit;font-size:13px;cursor:pointer;padding:0}
+footer{color:var(--muted);font-size:13px;padding:22px 16px 40px}
+.g-der{color:#2E5E8C;font-weight:800}.g-die{color:#B23A48;font-weight:800}.g-das{color:#2F7D6D;font-weight:800}
+@media (prefers-color-scheme:dark){.g-der{color:#7FA8D6}.g-die{color:#E07A88}.g-das{color:#6CC0A8}}
+</style></head>
+<body>
+<header><div class="wrap"><p style="margin:0 0 4px"><a href="index.html">← Аудио</a> &nbsp;·&nbsp; <a href="ueben02.html">Online üben</a> &nbsp;·&nbsp; <a href="karten01.html">Kapitel 1</a></p><h1>Karteikarten · Kapitel 2</h1></div></header>
+<div class="flag"></div>
+<main class="wrap">
+ <div class="ctrl">
+  <select id="les" aria-label="Lektion"></select>
+  <div class="mode" role="group" aria-label="Richtung"><button id="m1" aria-pressed="true">Немецкий → русский</button><button id="m2" aria-pressed="false">Русский → немецкий</button></div>
+ </div>
+ <div class="ctrl cats" id="cats"></div>
+ <div class="stat"><span id="cnt"></span><button class="link" id="reset">Сбросить прогресс</button></div>
+ <div class="bar"><i id="prog"></i></div>
+ <div id="stage"></div>
+ <p class="small"><b>Как учить:</b> знаете слово — сразу жмите «Знаю». Не уверены — нажмите на карточку, она перевернётся. «Ещё раз» — карточка скоро вернётся. Свайп вправо = знаю, влево = ещё раз. На компьютере: пробел — перевернуть, ← / → — ещё раз / знаю. Прогресс сохраняется только на этом устройстве.</p>
+</main>
+<footer class="wrap">Без регистрации, никакие данные не собираются. Слова озвучивает голос вашего устройства — лучше всего он звучит в браузере Microsoft Edge.</footer>
+<script>
+const D={"N": 2, "L": [{"n": "4", "t": "Was kostet der Computer?"}], "C": [{"id": "4|Техника|der Computer", "l": "4", "c": "Техника", "f": "der Computer", "s": "der Computer", "b": "компьютер", "r": "", "x": "Pl. die Computer", "e": "Der Computer ist neu.", "q": "", "se": "Der Computer ist neu."}, {"id": "4|Техника|der Laptop", "l": "4", "c": "Техника", "f": "der Laptop", "s": "der Laptop", "b": "ноутбук", "r": "", "x": "Pl. die Laptops", "e": "Was kostet der Laptop?", "q": "", "se": "Was kostet der Laptop?"}, {"id": "4|Техника|das Handy", "l": "4", "c": "Техника", "f": "das Handy", "s": "das Handy", "b": "мобильный телефон", "r": "", "x": "Pl. die Handys", "e": "Mein Handy ist kaputt!", "q": "", "se": "Mein Handy ist kaputt!"}, {"id": "4|Техника|das Tablet", "l": "4", "c": "Техника", "f": "das Tablet", "s": "das Tablet", "b": "планшет", "r": "", "x": "Pl. die Tablets", "e": "Das Tablet kostet 349 Euro.", "q": "", "se": "Das Tablet kostet 349 Euro."}, {"id": "4|Техника|der Fernseher", "l": "4", "c": "Техника", "f": "der Fernseher", "s": "der Fernseher", "b": "телевизор", "r": "", "x": "Pl. die Fernseher", "e": "", "q": "", "se": ""}, {"id": "4|Техника|die Kamera", "l": "4", "c": "Техника", "f": "die Kamera", "s": "die Kamera", "b": "камера, фотоаппарат", "r": "", "x": "Pl. die Kameras", "e": "", "q": "", "se": ""}, {"id": "4|Техника|der Kopfhörer", "l": "4", "c": "Техника", "f": "der Kopfhörer", "s": "der Kopfhörer", "b": "наушники", "r": "", "x": "Pl. die Kopfhörer", "e": "Was kosten die Kopfhörer?", "q": "", "se": "Was kosten die Kopfhörer?"}, {"id": "4|Техника|das Ladekabel", "l": "4", "c": "Техника", "f": "das Ladekabel", "s": "das Ladekabel", "b": "зарядный кабель", "r": "", "x": "Pl. die Ladekabel", "e": "Das Ladekabel ist auch dabei.", "q": "", "se": "Das Ladekabel ist auch dabei."}, {"id": "4|Техника|die Powerbank", "l": "4", "c": "Техника", "f": "die Powerbank", "s": "die Powerbank", "b": "пауэрбанк", "r": "", "x": "Pl. die Powerbanks", "e": "", "q": "", "se": ""}, {"id": "4|Дом и учёба|der Tisch", "l": "4", "c": "Дом и учёба", "f": "der Tisch", "s": "der Tisch", "b": "стол", "r": "", "x": "Pl. die Tische", "e": "Der Tisch ist groß.", "q": "", "se": "Der Tisch ist groß."}, {"id": "4|Дом и учёба|der Stuhl", "l": "4", "c": "Дом и учёба", "f": "der Stuhl", "s": "der Stuhl", "b": "стул", "r": "", "x": "Pl. die Stühle", "e": "", "q": "", "se": ""}, {"id": "4|Дом и учёба|der Schrank", "l": "4", "c": "Дом и учёба", "f": "der Schrank", "s": "der Schrank", "b": "шкаф", "r": "", "x": "Pl. die Schränke", "e": "", "q": "", "se": ""}, {"id": "4|Дом и учёба|das Regal", "l": "4", "c": "Дом и учёба", "f": "das Regal", "s": "das Regal", "b": "полка, стеллаж", "r": "", "x": "Pl. die Regale", "e": "", "q": "", "se": ""}, {"id": "4|Дом и учёба|das Sofa", "l": "4", "c": "Дом и учёба", "f": "das Sofa", "s": "das Sofa", "b": "диван", "r": "", "x": "Pl. die Sofas", "e": "Das Sofa ist alt, aber bequem.", "q": "", "se": "Das Sofa ist alt, aber bequem."}, {"id": "4|Дом и учёба|das Bett", "l": "4", "c": "Дом и учёба", "f": "das Bett", "s": "das Bett", "b": "кровать", "r": "", "x": "Pl. die Betten", "e": "", "q": "", "se": ""}, {"id": "4|Дом и учёба|die Lampe", "l": "4", "c": "Дом и учёба", "f": "die Lampe", "s": "die Lampe", "b": "лампа", "r": "", "x": "Pl. die Lampen", "e": "Was kostet die Lampe?", "q": "", "se": "Was kostet die Lampe?"}, {"id": "4|Дом и учёба|das Buch", "l": "4", "c": "Дом и учёба", "f": "das Buch", "s": "das Buch", "b": "книга", "r": "", "x": "Pl. die Bücher", "e": "Das Buch ist interessant.", "q": "", "se": "Das Buch ist interessant."}, {"id": "4|Дом и учёба|das Heft", "l": "4", "c": "Дом и учёба", "f": "das Heft", "s": "das Heft", "b": "тетрадь", "r": "", "x": "Pl. die Hefte", "e": "", "q": "", "se": ""}, {"id": "4|Дом и учёба|der Kuli", "l": "4", "c": "Дом и учёба", "f": "der Kuli", "s": "der Kuli", "b": "ручка", "r": "", "x": "Pl. die Kulis", "e": "", "q": "", "se": ""}, {"id": "4|С собой|die Tasche", "l": "4", "c": "С собой", "f": "die Tasche", "s": "die Tasche", "b": "сумка", "r": "", "x": "Pl. die Taschen", "e": "Wie findest du die Tasche?", "q": "", "se": "Wie findest du die Tasche?"}, {"id": "4|С собой|der Rucksack", "l": "4", "c": "С собой", "f": "der Rucksack", "s": "der Rucksack", "b": "рюкзак", "r": "", "x": "Pl. die Rucksäcke", "e": "", "q": "", "se": ""}, {"id": "4|С собой|die Brille", "l": "4", "c": "С собой", "f": "die Brille", "s": "die Brille", "b": "очки", "r": "", "x": "Pl. die Brillen", "e": "Die Brille ist schön.", "q": "", "se": "Die Brille ist schön."}, {"id": "4|С собой|die Uhr", "l": "4", "c": "С собой", "f": "die Uhr", "s": "die Uhr", "b": "часы", "r": "", "x": "Pl. die Uhren", "e": "Die Uhr kostet 249 Euro.", "q": "", "se": "Die Uhr kostet 249 Euro."}, {"id": "4|С собой|der Schlüssel", "l": "4", "c": "С собой", "f": "der Schlüssel", "s": "der Schlüssel", "b": "ключ", "r": "", "x": "Pl. die Schlüssel", "e": "Wo ist der Schlüssel?", "q": "", "se": "Wo ist der Schlüssel?"}, {"id": "4|С собой|der Regenschirm", "l": "4", "c": "С собой", "f": "der Regenschirm", "s": "der Regenschirm", "b": "зонт", "r": "", "x": "Pl. die Regenschirme", "e": "", "q": "", "se": ""}, {"id": "4|С собой|das Fahrrad", "l": "4", "c": "С собой", "f": "das Fahrrad", "s": "das Fahrrad", "b": "велосипед", "r": "", "x": "Pl. die Fahrräder", "e": "Das Fahrrad ist fast neu.", "q": "", "se": "Das Fahrrad ist fast neu."}, {"id": "4|Прилагательные|teuer ↔ billig", "l": "4", "c": "Прилагательные", "f": "teuer ↔ billig", "s": "teuer ↔ billig", "b": "дорогой ↔ дешёвый", "r": "", "x": "", "e": "Der Laptop ist teuer.", "q": "", "se": "Der Laptop ist teuer."}, {"id": "4|Прилагательные|günstig", "l": "4", "c": "Прилагательные", "f": "günstig", "s": "günstig", "b": "недорогой, выгодный", "r": "", "x": "", "e": "Das ist günstig!", "q": "", "se": "Das ist günstig!"}, {"id": "4|Прилагательные|neu ↔ alt", "l": "4", "c": "Прилагательные", "f": "neu ↔ alt", "s": "neu ↔ alt", "b": "новый ↔ старый", "r": "", "x": "", "e": "Das Fahrrad ist fast neu.", "q": "", "se": "Das Fahrrad ist fast neu."}, {"id": "4|Прилагательные|groß ↔ klein", "l": "4", "c": "Прилагательные", "f": "groß ↔ klein", "s": "groß ↔ klein", "b": "большой ↔ маленький", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Прилагательные|schön ↔ hässlich", "l": "4", "c": "Прилагательные", "f": "schön ↔ hässlich", "s": "schön ↔ hässlich", "b": "красивый ↔ некрасивый", "r": "", "x": "", "e": "Die Lampe ist schön, aber alt.", "q": "", "se": "Die Lampe ist schön, aber alt."}, {"id": "4|Прилагательные|praktisch", "l": "4", "c": "Прилагательные", "f": "praktisch", "s": "praktisch", "b": "практичный", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Прилагательные|kaputt", "l": "4", "c": "Прилагательные", "f": "kaputt", "s": "kaputt", "b": "сломанный", "r": "", "x": "", "e": "Mein Handy ist kaputt!", "q": "", "se": "Mein Handy ist kaputt!"}, {"id": "4|Прилагательные|bequem", "l": "4", "c": "Прилагательные", "f": "bequem", "s": "bequem", "b": "удобный", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Фразы|Was kostet …?", "l": "4", "c": "Фразы", "f": "Was kostet …?", "s": "Was kostet …?", "b": "Сколько стоит …? (один предмет)", "r": "", "x": "", "e": "Was kostet der Laptop?", "q": "", "se": "Was kostet der Laptop?"}, {"id": "4|Фразы|Was kosten …?", "l": "4", "c": "Фразы", "f": "Was kosten …?", "s": "Was kosten …?", "b": "Сколько стоят …? (много)", "r": "", "x": "", "e": "Was kosten die Kopfhörer?", "q": "", "se": "Was kosten die Kopfhörer?"}, {"id": "4|Фразы|Wie findest du …?", "l": "4", "c": "Фразы", "f": "Wie findest du …?", "s": "Wie findest du …?", "b": "Как тебе …?", "r": "", "x": "", "e": "Wie findest du die Tasche?", "q": "", "se": "Wie findest du die Tasche?"}, {"id": "4|Фразы|Das ist (zu) teuer!", "l": "4", "c": "Фразы", "f": "Das ist (zu) teuer!", "s": "Das ist (zu) teuer!", "b": "Это (слишком) дорого!", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Фразы|Geht es billiger?", "l": "4", "c": "Фразы", "f": "Geht es billiger?", "s": "Geht es billiger?", "b": "А можно дешевле?", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Фразы|Ich nehme …", "l": "4", "c": "Фразы", "f": "Ich nehme …", "s": "Ich nehme …", "b": "Я беру …", "r": "", "x": "", "e": "Ich nehme die Lampe.", "q": "", "se": "Ich nehme die Lampe."}, {"id": "4|Числа|120", "l": "4", "c": "Числа", "f": "hundertzwanzig", "s": "hundertzwanzig", "b": "120", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Числа|199", "l": "4", "c": "Числа", "f": "hundertneunundneunzig", "s": "hundertneunundneunzig", "b": "199", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Числа|350", "l": "4", "c": "Числа", "f": "dreihundertfünfzig", "s": "dreihundertfünfzig", "b": "350", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Числа|499", "l": "4", "c": "Числа", "f": "vierhundertneunundneunzig", "s": "vierhundertneunundneunzig", "b": "499", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Числа|1000", "l": "4", "c": "Числа", "f": "tausend", "s": "tausend", "b": "1000", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Числа|4,99 €", "l": "4", "c": "Числа", "f": "vier Euro neunundneunzig", "s": "vier Euro neunundneunzig", "b": "4,99 €", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Числа|0,50 €", "l": "4", "c": "Числа", "f": "fünfzig Cent", "s": "fünfzig Cent", "b": "0,50 €", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Числа|39,90 €", "l": "4", "c": "Числа", "f": "neununddreißig Euro neunzig", "s": "neununddreißig Euro neunzig", "b": "39,90 €", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Грамматика|er / sie / es", "l": "4", "c": "Грамматика", "f": "er / sie / es", "s": "er / sie / es", "b": "он / она / оно — по артиклю!", "r": "", "x": "der → er · die → sie · das → es · Pl. → sie", "e": "", "q": "", "se": ""}, {"id": "4|Alltagsdeutsch|Wie teuer!", "l": "4", "c": "Alltagsdeutsch", "f": "Wie teuer!", "s": "Wie teuer!", "b": "Как дорого!", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Alltagsdeutsch|Echt günstig!", "l": "4", "c": "Alltagsdeutsch", "f": "Echt günstig!", "s": "Echt günstig!", "b": "Правда недорого!", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Alltagsdeutsch|Das ist ein Schnäppchen!", "l": "4", "c": "Alltagsdeutsch", "f": "Das ist ein Schnäppchen!", "s": "Das ist ein Schnäppchen!", "b": "Это выгодная покупка!", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Alltagsdeutsch|Na gut.", "l": "4", "c": "Alltagsdeutsch", "f": "Na gut.", "s": "Na gut.", "b": "Ну ладно.", "r": "", "x": "", "e": "", "q": "", "se": ""}, {"id": "4|Alltagsdeutsch|Glück gehabt!", "l": "4", "c": "Alltagsdeutsch", "f": "Glück gehabt!", "s": "Glück gehabt!", "b": "Повезло!", "r": "", "x": "", "e": "", "q": "", "se": ""}]};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const KEY='a1karten'+D.N;
+let known=new Set(); try{known=new Set(JSON.parse(localStorage.getItem(KEY)||'[]'))}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify([...known]))}catch(e){}};
+// ---- Stimme: beste deutsche Stimme (wie auf der Audio-Seite)
+let voice=null;
+function score(v){let s=0;const n=v.name;if(/natural|neural|online/i.test(n))s+=60;if(/premium|enhanced|erweitert|verbessert/i.test(n))s+=45;if(/google/i.test(n))s+=35;if(/de[-_]DE/i.test(v.lang))s+=10;if(/desktop/i.test(n))s-=10;return s}
+function loadV(){if(!('speechSynthesis' in window))return;const vs=speechSynthesis.getVoices().filter(v=>/^de/i.test(v.lang)).sort((a,b)=>score(b)-score(a));let saved=null;try{saved=localStorage.getItem('a1voice')}catch(e){}voice=vs.find(v=>v.name===saved)||vs[0]||null}
+if('speechSynthesis' in window){loadV();speechSynthesis.onvoiceschanged=loadV}
+function say(t){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);if(voice){u.voice=voice;u.lang=voice.lang}else u.lang='de-DE';u.rate=.9;speechSynthesis.speak(u)}
+// ---- Auswahl
+const CATS=[...new Set(D.C.map(c=>c.c))];
+let les='alle', cats=new Set(CATS), rev=false, queue=[], cur=null, flipped=false;
+$('#les').innerHTML='<option value="alle">Все уроки главы</option>'+D.L.map(l=>`<option value="${esc(l.n)}">${l.n==='A'?'Abschluss':'Lektion '+esc(l.n)} · ${esc(l.t)}</option>`).join('');
+$('#cats').innerHTML=CATS.map(c=>`<button class="chip" data-c="${esc(c)}" aria-pressed="${cats.has(c)}">${esc(c)}</button>`).join('');
+const pool=()=>D.C.filter(c=>(les==='alle'||c.l===les)&&cats.has(c.c));
+function stats(){const p=pool(),k=p.filter(c=>known.has(c.id)).length;$('#cnt').textContent=`Выучено: ${k} из ${p.length} карточек`;$('#prog').style.width=(p.length?100*k/p.length:0)+'%'}
+function start(all){const p=pool();queue=shuffle(all?p:p.filter(c=>!known.has(c.id)));next()}
+function artcol(f){ // артикль цветом: der синий, die красный, das зелёный
+  const m=/^(der|die|das) (.*)$/.exec(f); if(!m) return esc(f);
+  return `<span class="g-${m[1]}">${m[1]}</span> ${esc(m[2])}`;
+}
+function face(c,front){
+  // Немецкая сторона: слово (+ формы) и кнопка 🔊.
+  const de=`<div class="main">${artcol(c.f)}</div>${c.x?`<div class="sub">${esc(c.x)}</div>`:''}<button class="say" aria-label="Послушать" data-say="1">🔊</button>`;
+  // Значение: 1) объяснение по-немецки, 2) пример (+ 🔊), 3) перевод — мелко и серым.
+  const exm=c.e?`<div class="ex"><i>${esc(c.e)}</i> <button class="say mini" aria-label="Послушать пример" data-say="2">🔊</button></div>`:'';
+  const ru=c.r?`<div class="ru">${esc(c.r)}</div>`:'';
+  const expl=`<div class="expl">${esc(c.b)}</div>`;
+  if(!rev) return front?de:expl+exm+ru;
+  // Обратное направление: спереди только объяснение (пример выдал бы слово), сзади — всё.
+  return front?`<div class="expl">${esc(c.q?c.q:c.b)}</div>${c.q?`<div class="expl" style="font-size:15px;font-weight:400">${esc(c.b)}</div>`:''}`:de+exm+ru;
+}
+function next(){
+  stats(); flipped=false;
+  if(!queue.length){const p=pool();
+    $('#stage').innerHTML=p.length?`<div class="done"><b>Super! 🎉</b>${p.every(c=>known.has(c.id))?'Все карточки в этой подборке выучены.':'Круг пройден.'}<br><br><button class="btn" id="again">Все карточки ещё раз</button></div>`:'<div class="done"><b>Нет карточек</b>Выберите вверху урок или категорию.</div>';
+    const a=$('#again'); if(a) a.onclick=()=>start(true); return}
+  cur=queue[0];
+  $('#stage').innerHTML=`<div class="cardbox"><div class="kcard" id="kc"><div class="side front"><span class="tag">${esc(cur.c)} · L${esc(cur.l)}</span>${face(cur,true)}<span class="hintflip">Нажмите, чтобы перевернуть</span></div><div class="side back"><span class="tag">${esc(cur.c)}</span>${face(cur,false)}</div></div></div>
+   <div class="acts"><button class="again" id="b0">↺ Ещё раз</button><button class="known" id="b1">✓ Знаю</button></div>`;
+  const kc=$('#kc');
+  const fit=()=>{const h=Math.max(...[...kc.querySelectorAll('.side')].map(s=>s.scrollHeight),260);kc.style.minHeight=h+'px'};fit();
+  kc.onclick=e=>{const sb=e.target.closest('[data-say]'); if(sb){e.stopPropagation();say(sb.dataset.say==='2'?cur.se:cur.s);return}flip()};
+  $('#b0').onclick=()=>answer(false); $('#b1').onclick=()=>answer(true);
+  let x0=null; kc.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
+  kc.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>70)answer(dx>0)},{passive:true});
+}
+function flip(){const kc=$('#kc');if(!kc)return;flipped=!flipped;kc.classList.toggle('flip',flipped)}
+function answer(ok){if(!cur)return;queue.shift();
+  if(ok){known.add(cur.id);save()} else {known.delete(cur.id);save();queue.splice(Math.min(3,queue.length),0,cur)}
+  next()}
+$('#les').onchange=e=>{les=e.target.value;start(false)};
+$('#cats').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;const c=b.dataset.c;cats.has(c)?cats.delete(c):cats.add(c);b.setAttribute('aria-pressed',cats.has(c));start(false)};
+$('#m1').onclick=()=>{rev=false;$('#m1').setAttribute('aria-pressed','true');$('#m2').setAttribute('aria-pressed','false');next()};
+$('#m2').onclick=()=>{rev=true;$('#m2').setAttribute('aria-pressed','true');$('#m1').setAttribute('aria-pressed','false');next()};
+$('#reset').onclick=()=>{if(confirm('Сбросить прогресс по этой главе?')){known.clear();save();start(false)}};
+document.addEventListener('keydown',e=>{if(e.target.tagName==='SELECT')return;if(e.key===' '){e.preventDefault();flip()}else if(e.key==='ArrowRight')answer(true);else if(e.key==='ArrowLeft')answer(false)});
+start(false);
+</script>
+</body></html>
