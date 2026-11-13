@@ -358,7 +358,7 @@ function viewLesson(R){
     if(e.sec!==lastSec){rows.push(`<h2 style="--dark:var(--${SECTY[e.sec].toLowerCase()}d)">${SECL[e.sec]}</h2>`);lastSec=e.sec;lastG=''}
     if(e.g&&e.g!==lastG) rows.push(`<h3>${esc(e.n+' '+e.g)}</h3>`); lastG=e.g||'';
     const s=sts[i], st=s.full?`<span class="st ok">${s.sc}/${s.tot}</span>`:(s.n?`<span class="st run">${s.n}/${s.tasks}</span>`:'<span class="st todo" aria-label="noch nicht begonnen"></span>');
-    rows.push(`<a class="lrow t-${e.ty}" href="${hashOf(L,e)}"><span class="ico ib">${sv(IC[e.ty],22)}</span><span class="tx"><b>${esc(exLabel(e))}</b><small>${esc(amount(L,e,star))}${e.star?' \u00b7 \u2605 h\u00e4ufige Fehler':''}</small></span>${st}</a>`);
+    rows.push(`<a class="lrow t-${e.ty}" href="${hashOf(L,e)}"><span class="ico ib">${sv(IC[e.ty],22)}</span><span class="tx"><b>${esc(exLabel(e))}</b><small>${esc(amount(L,e,star))}${e.star?' \u00b7 \u2605':''}</small></span>${st}</a>`);
   });
   const nm=Object.keys(getE()).length;
   app.innerHTML=`<div class="lp-img"><img src="${L.img||HERO}" alt=""><a class="back" href="#" data-nav="up">${BACK}Kapitel ${N}</a></div>
@@ -411,7 +411,7 @@ function dotsHtml(){
   return S.items.map((_,i)=>{const r=itemRes(S.ans[i],S.items[i],S.ex); const cls=r||(i===S.idx?'cur':''); 
     return `<button class="dot ${cls}${i===S.idx&&r?' seen':''}" data-i="${i}" aria-label="Aufgabe ${i+1}${r==='ok'?', richtig':r==='no'?', falsch':''}${i===S.idx?', aktuell':''}">${r==='ok'?CHECK:(r==='no'?CROSS:i+1)}</button>`}).join('');
 }
-function openText(){const t=tally(); return (t.n>0&&t.open.length)?'Noch offen: '+t.open.join(', '):''}
+function openText(){return ''}
 function redrawDots(){const d=$('#dots'); if(d){d.innerHTML=dotsHtml(); bindDots()} const o=$('#open'); if(o) o.textContent=openText()}
 function bindDots(){$$('#dots .dot').forEach(b=>b.onclick=()=>{S.idx=+b.dataset.i; task()})}
 function frame(inner,showDots){
