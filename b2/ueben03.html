@@ -482,7 +482,7 @@ function boardMatch(){
   $$('.mc.r').forEach(b=>b.onclick=()=>{
     const j=+b.dataset.i; if(got[j]) return; if(sel<0){msg.textContent='Tippen Sie zuerst links auf ein Wort.';return}
     if(sel===j){ got[j]=true; cnt++; const l=$(`.mc.l[data-i="${j}"]`); [l,b].forEach(x=>{x.classList.remove('sel');x.classList.add('done');x.disabled=true; x.insertAdjacentHTML('afterbegin',`<span class="nb">${cnt}</span>`)}); sel=-1; msg.textContent=''; if(cnt===P.length) fin(); }
-    else { miss[sel]++; b.classList.add('shake'); setTimeout(()=>b.classList.remove('shake'),400); msg.textContent='Nicht ganz: Die Erkl\u00e4rung \u201e'+P[j].b+'\u201c geh\u00f6rt zu \u201e'+P[j].a+'\u201c.'; }
+    else { miss[sel]++; b.classList.add('shake'); setTimeout(()=>b.classList.remove('shake'),400); msg.textContent='Das passt nicht. Versuchen Sie es noch einmal.'; }
   });
   function fin(){ S.score=miss.filter(m=>m===0).length;
     P.forEach((p,i)=>{ if(miss[i]){ const o=[p.b,...sshuf(P.filter((_,k)=>k!==i).map(x=>x.b),'e'+p.a).slice(0,2)]; const it={q:'Was bedeutet \u201e'+p.a+'\u201c?',o,e:p.e,w:Object.fromEntries(o.slice(1).map(x=>[x,'Das ist die Erkl\u00e4rung zu \u201e'+P.find(y=>y.b===x).a+'\u201c.']))}; S.wrong.push({n:0,it}); addErr(it,'c')} });
